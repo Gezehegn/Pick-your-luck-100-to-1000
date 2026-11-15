@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,6 +6,7 @@
   <title>Online Lottery — 1 to 100 (100×n ETB CBE Payment to Gezahgn Terefe Tamene)</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -163,9 +163,9 @@
           </div>
           <ol class="list-decimal list-inside space-y-1 text-emerald-100">
             <li><strong>Pick 1 number</strong> from 1 to 100 (Step 1).</li>
-            <li><strong>Pay 100×n ETB</strong> (100 ETB = 1 chance, 200 ETB = 2 chances, etc.).</li>
-            <li><strong>Upload stamped PDF or image receipt</strong> with correct bank stamp.</li>
-            <li><strong>Continue Chances:</strong> Play chance 1, then click "Continue to Next Chance" up to n times without blocking!</li>
+            <li><strong>Pay 100×n ETB</strong> to <strong>1000581888205</strong>.</li>
+            <li><strong>Upload receipt</strong> (Scanner checks account <strong class="font-mono">1****8205</strong> &amp; FT reference).</li>
+            <li><strong>Play Chances:</strong> Continue chance by chance up to n times!</li>
           </ol>
         </div>
 
@@ -196,8 +196,8 @@
       <div id="stepTab2" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white p-3 opacity-70 transition-all">
         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-200 text-xs font-bold text-slate-600">2</span>
         <div class="min-w-0">
-          <div class="truncate text-xs font-semibold text-slate-700 sm:text-sm">Verify Stamped Receipt</div>
-          <div class="hidden text-xs text-slate-500 sm:block">100×n ETB = n Chances</div>
+          <div class="truncate text-xs font-semibold text-slate-700 sm:text-sm">Scan Receipt (1****8205)</div>
+          <div class="hidden text-xs text-slate-500 sm:block">Account &amp; FT Reference Check</div>
         </div>
       </div>
       <div id="stepTab3" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white p-3 opacity-70 transition-all">
@@ -217,7 +217,7 @@
           <div>
             <h2 class="text-lg font-bold text-slate-900">Step 1: Choose Your Lucky Number (1–100)</h2>
             <p class="text-sm text-slate-600">
-              Select any number from 1 to 100. Step 2 verifies your stamped receipt for <strong>Gezahgn Terefe Tamene</strong> (Account <strong class="font-mono">1000581888205</strong>). Pay 100×n ETB for n chances.
+              Select any number from 1 to 100. Step 2 verifies your receipt for account <strong class="font-mono">1000581888205</strong> (scanning for <strong class="font-mono">1****8205</strong>).
             </p>
           </div>
           <div class="flex flex-wrap items-center gap-2">
@@ -236,17 +236,17 @@
         <div class="mt-6 flex flex-col items-stretch justify-between gap-3 border-t border-slate-100 pt-4 sm:flex-row sm:items-center">
           <p class="text-xs text-slate-500">Multi-Chance Policy: 100 ETB = 1 chance, 200 ETB = 2 chances, 100×n ETB = n chances.</p>
           <button id="toStep2Btn" type="button" disabled class="btn-shimmer inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-slate-300">
-            Continue to Stamped Receipt &amp; Multi-Chance &rarr;
+            Continue to Receipt Scan &amp; Draw &rarr;
           </button>
         </div>
       </section>
 
-      <!-- STEP 2: CBE Payment & Stamped Receipt Verification -->
+      <!-- STEP 2: CBE Payment & Receipt Scan Rule -->
       <section id="step2Section" class="hidden fade-slide-in">
         <div class="mb-5 flex items-center justify-between">
           <div>
-            <h2 class="text-lg font-bold text-slate-900">Step 2: Send 100×n ETB &amp; Scan Stamped PDF/Image Receipt</h2>
-            <p class="text-sm text-slate-600">The scanner detects your total paid amount to calculate your available chances (100 ETB = 1 chance, 200 ETB = 2 chances, etc.).</p>
+            <h2 class="text-lg font-bold text-slate-900">Step 2: Send 100×n ETB &amp; Scan Receipt (1****8205 &amp; FT Reference)</h2>
+            <p class="text-sm text-slate-600">The scanner checks your uploaded receipt exclusively for account ending/matching <strong>1****8205</strong>, transfer amount (100×n ETB), and unique FT reference.</p>
           </div>
           <button id="backToStep1Btn" type="button" class="rounded-lg border border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-50">
             &larr; Change Number
@@ -255,11 +255,11 @@
 
         <div class="grid gap-6 md:grid-cols-5">
           <form id="paymentForm" class="space-y-4 md:col-span-3" novalidate>
-            <!-- Receiver Account Box -->
+            <!-- Receiver Account Box (Full Account for Sender to Copy) -->
             <div class="rounded-xl border border-emerald-200 bg-emerald-50/70 p-3.5">
               <div class="flex items-center justify-between gap-3">
                 <div>
-                  <div class="text-xs font-semibold text-emerald-800">Owner &amp; Receiver CBE Account (Send 100×n ETB)</div>
+                  <div class="text-xs font-semibold text-emerald-800">Receiver CBE Account (Copy to Send)</div>
                   <div class="text-sm font-bold text-emerald-950">Gezahgn Terefe Tamene</div>
                   <div class="font-mono text-lg font-extrabold tracking-wide text-emerald-950">1000581888205</div>
                 </div>
@@ -283,8 +283,8 @@
 
             <!-- Bank Receipt Upload (PDF or Image) -->
             <div>
-              <label for="receiptFile" class="block text-sm font-semibold text-slate-700">Upload Stamped CBE Bank Receipt (PDF / PNG / JPG) <span class="text-rose-600">*</span></label>
-              <p class="mt-0.5 text-xs text-slate-500">Upload your PDF or image receipt showing <strong>Gezahgn Terefe Tamene</strong>, account ending in <strong class="font-mono">8205</strong> (<strong class="font-mono">1****8205</strong>), amount (<strong>100×n ETB</strong>), bank stamp/seal indicator, and unique <strong>FT</strong> reference.</p>
+              <label for="receiptFile" class="block text-sm font-semibold text-slate-700">Upload Bank Receipt (PDF / PNG / JPG) <span class="text-rose-600">*</span></label>
+              <p class="mt-0.5 text-xs text-slate-500">Must show account <strong>1****8205</strong> (or 1000581888205), amount (<strong>100×n ETB</strong>), and <strong>FT</strong> reference.</p>
               <div id="receiptDropZone" class="mt-1.5 rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 p-3.5 text-center transition-all hover:border-emerald-400">
                 <input id="receiptFile" type="file" accept="application/pdf,image/png,image/jpeg,image/webp,image/*" class="block w-full text-xs text-slate-600 file:mr-3 file:rounded-lg file:border-0 file:bg-emerald-600 file:px-3 file:py-2 file:text-xs file:font-semibold file:text-white hover:file:bg-emerald-700" />
                 <p class="mt-1.5 text-[11px] text-slate-400">Or drag and drop PDF / image receipt here</p>
@@ -295,19 +295,17 @@
                     <img id="receiptThumb" alt="Receipt preview" class="h-14 w-14 shrink-0 rounded-md border border-slate-200 object-cover" />
                     <div class="min-w-0">
                       <div id="receiptFileName" class="truncate text-xs font-semibold text-slate-800"></div>
-                      <div id="scanStatusText" class="text-xs font-medium text-amber-700">Scanning amount &amp; stamp...</div>
+                      <div id="scanStatusText" class="text-xs font-medium text-amber-700">Scanning receipt for 1****8205 &amp; FT ref...</div>
                     </div>
                   </div>
                   <button id="clearReceiptBtn" type="button" class="shrink-0 rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-semibold text-slate-600 hover:bg-slate-100">Remove</button>
                 </div>
 
-                <!-- Live OCR Verification Checklist -->
+                <!-- Strict Scan Rule Checklist -->
                 <div id="ocrChecklist" class="mt-3 hidden rounded-lg border border-slate-200 bg-white p-3 text-left text-xs space-y-1.5">
-                  <div class="font-bold text-slate-800">Multi-Chance Receipt Verification:</div>
-                  <div id="chkOwner" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Receiver Name: Gezahgn Terefe Tamene</div>
-                  <div id="chkAccount" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Receiver CBE Account: 1****8205</div>
+                  <div class="font-bold text-slate-800">Scan Rule Verification (1****8205 &amp; FT Ref):</div>
+                  <div id="chkAccount" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Account Check: 1****8205 / 1000581888205</div>
                   <div id="chkAmount" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Transfer Amount: 100×n ETB (Grants n Chances)</div>
-                  <div id="chkStamp" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Official Bank Stamp / Seal Indicator</div>
                   <div id="chkRef" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Unique Unused Transaction Reference (FT...)</div>
                 </div>
               </div>
@@ -317,7 +315,7 @@
             <div>
               <label for="receiptRef" class="block text-sm font-semibold text-slate-700">CBE Transaction Reference (FT Number) <span class="text-rose-600">*</span></label>
               <input id="receiptRef" type="text" required placeholder="Auto-detected from receipt or enter FT..." class="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 font-mono text-sm uppercase text-slate-900 focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-600/20" />
-              <p id="receiptRefHelp" class="mt-1 text-xs text-slate-500">Must start with FT and be unique. Each reference grants n chances based on the amount.</p>
+              <p id="receiptRefHelp" class="mt-1 text-xs text-slate-500">Must start with FT, match receipt, and be unique.</p>
             </div>
 
             <!-- Payment Confirmation Checkbox -->
@@ -325,7 +323,7 @@
               <label class="flex cursor-pointer items-start gap-2.5">
                 <input id="paymentConfirmCheck" type="checkbox" class="mt-0.5 h-4 w-4 rounded border-emerald-400 text-emerald-600 focus:ring-emerald-600" />
                 <span class="text-xs text-slate-800">
-                  <strong>Confirm Multi-Chance Payment:</strong> I confirm I transferred <strong>100×n ETB</strong> to <strong>Gezahgn Terefe Tamene</strong> (CBE <strong class="font-mono">1000581888205</strong>) and uploaded a genuine stamped receipt for my multiple chances.
+                  <strong>Confirm Payment Rule:</strong> I confirm I transferred <strong>100×n ETB</strong> to <strong>1000581888205</strong>.
                 </span>
               </label>
             </div>
@@ -334,7 +332,7 @@
               <label class="flex cursor-pointer items-start gap-2.5">
                 <input id="demoWinToggle" type="checkbox" class="mt-0.5 h-4 w-4 rounded border-amber-400 text-emerald-600 focus:ring-emerald-600" />
                 <span class="text-xs text-amber-900">
-                  <strong>Owner Test Win Mode:</strong> Force this draw to match your number for testing the Win Confirmation &amp; Email Alarm. Leave unchecked so a player wins on their 80th trial.
+                  <strong>Owner Test Win Mode:</strong> Force win for testing email alarm to <strong>gezehegn43@gmail.com</strong>.
                 </span>
               </label>
             </div>
@@ -343,13 +341,13 @@
               <label class="flex cursor-pointer items-start gap-2.5">
                 <input id="autoEmailToggle" type="checkbox" checked class="mt-0.5 h-4 w-4 rounded border-slate-400 text-emerald-600 focus:ring-emerald-600" />
                 <span class="text-xs text-slate-700">
-                  <strong>Auto-Open Email Alarm:</strong> Automatically open your email app to send the win &amp; receipt details to <strong>gezehegn43@gmail.com</strong> if you win.
+                  <strong>Auto-Open Email Alarm:</strong> Automatically send win &amp; receipt details to <strong>gezehegn43@gmail.com</strong> upon winning.
                 </span>
               </label>
             </div>
 
             <button id="payAndDrawBtn" type="submit" disabled class="btn-shimmer w-full rounded-xl bg-emerald-600 px-5 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-slate-300">
-              Verify Stamped Receipt &amp; Start Multi-Chance Draw
+              Verify Receipt &amp; Start Multi-Chance Draw
             </button>
           </form>
 
@@ -363,12 +361,12 @@
                   <dd id="summaryNumber" class="font-bold text-emerald-700">#--</dd>
                 </div>
                 <div class="flex justify-between">
-                  <dt class="text-slate-500">Owner Name</dt>
-                  <dd class="font-semibold text-slate-900">Gezahgn Terefe Tamene</dd>
+                  <dt class="text-slate-500">Scan Target Account</dt>
+                  <dd class="font-mono font-bold text-slate-900">1****8205</dd>
                 </div>
                 <div class="flex justify-between">
-                  <dt class="text-slate-500">Receiver CBE</dt>
-                  <dd class="font-mono font-bold text-slate-900">1000581888205</dd>
+                  <dt class="text-slate-500">Full Copy Account</dt>
+                  <dd class="font-mono font-bold text-emerald-700">1000581888205</dd>
                 </div>
                 <div class="flex justify-between">
                   <dt class="text-slate-500">Receipt Amount</dt>
@@ -383,7 +381,7 @@
                   <dd id="summaryReceiptRef" class="font-mono text-xs font-semibold text-slate-600">Not entered</dd>
                 </div>
                 <div class="flex justify-between">
-                  <dt class="text-slate-500">OCR Verification</dt>
+                  <dt class="text-slate-500">Scan Check</dt>
                   <dd id="summaryReceiptStatus" class="text-xs font-semibold text-rose-600">Pending Receipt</dd>
                 </div>
                 <div class="flex justify-between">
@@ -398,11 +396,10 @@
             </div>
 
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-600 space-y-1.5">
-              <div class="font-bold text-slate-800">Multi-Chance Rules</div>
+              <div class="font-bold text-slate-800">Scan Rule Summary</div>
               <p class="leading-relaxed">
-                • 100 ETB = 1 Chance<br/>
-                • 200 ETB = 2 Chances<br/>
-                • 100×n ETB = n Chances (Continue without blocking!)
+                • Scanner validates account <strong>1****8205</strong> &amp; FT reference<br/>
+                • 100 ETB = 1 Chance, 200 ETB = 2 Chances, 100×n ETB = n Chances
               </p>
             </div>
           </div>
@@ -436,7 +433,7 @@
                 <div id="winNumberDisplay" class="font-bold text-emerald-700"></div>
               </div>
               <div>
-                <div class="text-xs text-slate-500">Paid to Owner</div>
+                <div class="text-xs text-slate-500">Paid to Account</div>
                 <div id="winPaidDisplay" class="font-bold text-slate-900"></div>
               </div>
               <div>
@@ -451,7 +448,7 @@
             <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h3 class="text-sm font-bold text-slate-900">📧 Winner &amp; Receipt Alarm &rarr; gezehegn43@gmail.com</h3>
-                <p class="mt-0.5 text-xs text-slate-600">Send the verified stamped receipt details and winner name to Gezahgn Terefe Tamene for payout.</p>
+                <p class="mt-0.5 text-xs text-slate-600">Send the verified receipt details and winner name to Gezahgn Terefe Tamene for payout.</p>
               </div>
               <div class="flex flex-wrap gap-2">
                 <a id="mailtoAlarmLink" href="mailto:gezehegn43@gmail.com" class="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-emerald-700">
@@ -475,17 +472,20 @@
           </div>
         </div>
 
-        <!-- Loss State with "Continue Chance" button -->
+        <!-- Loss State -->
         <div id="lossState" class="hidden space-y-5 fade-slide-in">
           <div class="rounded-2xl border border-rose-200 bg-rose-50 p-6 text-center">
             <div class="text-4xl">🙏</div>
             <h2 id="lossTitle" class="mt-2 text-xl font-extrabold text-rose-900">Chance 1 of n — Not a Match This Time</h2>
-            <p class="mx-auto mt-2 max-w-lg text-sm text-rose-800">
+            <p id="lossSubtext" class="mx-auto mt-2 max-w-lg text-sm text-rose-800">
               Your chosen number <strong id="lossPickedNum">#--</strong> did not match (<strong id="lossWinningNum">#--</strong>). You have remaining chances from your paid receipt!
             </p>
             <div class="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
               <button id="continueChanceBtn" type="button" class="btn-shimmer inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-emerald-700">
                 <span>▶️</span> Continue to Next Chance (Chance <span id="nextChanceNum">2</span>)
+              </button>
+              <button id="playAgainAfterLossBtn" type="button" class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800">
+                New Receipt Round
               </button>
             </div>
           </div>
@@ -497,29 +497,33 @@
     <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
       <div class="flex flex-wrap items-center justify-between gap-2">
         <h2 class="text-base font-bold text-slate-900">Verified Multi-Chance Draw History</h2>
-        <span class="text-xs font-medium text-slate-500">Owner: <strong class="text-slate-700">Gezahgn Terefe Tamene</strong> &bull; CBE: <strong class="font-mono text-slate-700">1000581888205</strong></span>
+        <span class="text-xs font-medium text-slate-500">Receiver Account: <strong class="font-mono text-slate-700">1000581888205</strong></span>
       </div>
       <div id="historyList" class="mt-3 space-y-2 text-sm text-slate-500">
-        <p class="text-xs">No verified draws yet. Pick a number and upload a stamped 100×n ETB receipt to start.</p>
+        <p class="text-xs">No verified draws yet. Pick a number and upload a receipt to start.</p>
       </div>
     </section>
   </div>
 
   <script>
     (function () {
+      if (typeof pdfjsLib !== 'undefined') {
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      }
+
       const AUTH_HASH_HEX = 'eb5c52d9f1eba28c1abb0b5678b7d7b4d538c2993279e021f7b14daa77a11dd6';
       const AUTH_SESSION_KEY = 'lottery_unlocked_v1';
       const ADMIN_EMAIL = 'gezehegn43@gmail.com';
       const OWNER_NAME = 'Gezahgn Terefe Tamene';
-      const RECEIVER_ACCOUNT = '1000581888205';
-      const RECEIVER_ACCOUNT_MASKED = '1****8205';
+      const RECEIVER_ACCOUNT_FULL = '1000581888205';
+      const RECEIVER_ACCOUNT_MASKED_CHECK = '1****8205';
       const RECEIVER_ACCOUNT_LAST4 = '8205';
       const ENTRY_FEE = 100;
       const PRIZE_AMOUNT = 1000;
-      const USED_REFS_KEY = 'lottery_used_cbe_refs_v5';
-      const PLAYER_TRIES_KEY = 'lottery_player_tries_v4';
-      const STATS_STORAGE_KEY = 'lottery_stats_v4';
-      const HISTORY_STORAGE_KEY = 'lottery_history_v4';
+      const USED_REFS_KEY = 'lottery_used_cbe_refs_v7';
+      const PLAYER_TRIES_KEY = 'lottery_player_tries_v6';
+      const STATS_STORAGE_KEY = 'lottery_stats_v6';
+      const HISTORY_STORAGE_KEY = 'lottery_history_v6';
       const WIN_CYCLE_LIMIT = 80;
 
       function loadJSON(key, fallback) {
@@ -559,14 +563,12 @@
         isScanning: false,
         ocrText: '',
         detectedAmount: 0,
-        totalChances: 1,
+        totalChances: 0,
         currentChanceIndex: 1,
         activeSessionData: null,
         ocrChecks: {
-          owner: false,
           account: false,
           amount: false,
-          stamp: false,
           refMatch: false
         },
         usedRefs: loadJSON(USED_REFS_KEY, []),
@@ -614,10 +616,8 @@
         scanStatusText: document.getElementById('scanStatusText'),
         clearReceiptBtn: document.getElementById('clearReceiptBtn'),
         ocrChecklist: document.getElementById('ocrChecklist'),
-        chkOwner: document.getElementById('chkOwner'),
         chkAccount: document.getElementById('chkAccount'),
         chkAmount: document.getElementById('chkAmount'),
-        chkStamp: document.getElementById('chkStamp'),
         chkRef: document.getElementById('chkRef'),
         paymentConfirmCheck: document.getElementById('paymentConfirmCheck'),
         ownerTestBox: document.getElementById('ownerTestBox'),
@@ -649,9 +649,11 @@
         playAgainAfterWinBtn: document.getElementById('playAgainAfterWinBtn'),
         lossState: document.getElementById('lossState'),
         lossTitle: document.getElementById('lossTitle'),
+        lossSubtext: document.getElementById('lossSubtext'),
         lossPickedNum: document.getElementById('lossPickedNum'),
         lossWinningNum: document.getElementById('lossWinningNum'),
         continueChanceBtn: document.getElementById('continueChanceBtn'),
+        playAgainAfterLossBtn: document.getElementById('playAgainAfterLossBtn'),
         nextChanceNum: document.getElementById('nextChanceNum'),
         historyList: document.getElementById('historyList')
       };
@@ -903,12 +905,28 @@
         node.innerHTML = '<span>' + icon + '</span> ' + label;
       }
 
+      async function extractPdfText(file) {
+        if (typeof pdfjsLib === 'undefined') {
+          throw new Error('PDF reader library unavailable');
+        }
+        const arrayBuffer = await file.arrayBuffer();
+        const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+        let fullText = '';
+        for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+          const page = await pdf.getPage(pageNum);
+          const content = await page.getTextContent();
+          const pageStrings = content.items.map((item) => item.str);
+          fullText += pageStrings.join(' ') + '\n';
+        }
+        return fullText;
+      }
+
       function parseReceiptAmount(upperText) {
         const candidates = [];
         const patterns = [
           /(?:ETB|BIRR)\s*([0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]{1,2})?/gi,
           /\b([0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]{1,2})?\s*(?:ETB|BIRR)\b/gi,
-          /(?:AMOUNT|TOTAL|PAID|TRANSFERRED)[^\d\n]{0,18}([0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]{1,2})?/gi
+          /(?:AMOUNT|TOTAL|PAID|TRANSFERRED)[^\d\n]{0,20}([0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]{1,2})?/gi
         ];
         patterns.forEach((re) => {
           let m;
@@ -922,13 +940,13 @@
         const validMultiples = candidates.filter((v) => v % ENTRY_FEE === 0);
         if (validMultiples.length > 0) return Math.max(...validMultiples);
         if (candidates.length > 0) return candidates[0];
-        return ENTRY_FEE; // Default to 100 ETB (1 chance) if clearly valid receipt
+        return 0;
       }
 
       function extractFtReference(upperText) {
-        const direct = upperText.match(/\bFT[A-Z0-9]{6,}\b/);
+        const direct = upperText.match(/\bFT[A-Z0-9]{8,14}\b/);
         if (direct) return direct[0];
-        const spaced = upperText.match(/\bFT[\s-]?([A-Z0-9]{6,})\b/);
+        const spaced = upperText.match(/\bFT[\s-]?([A-Z0-9]{8,14})\b/);
         if (spaced) return 'FT' + spaced[1];
         return '';
       }
@@ -939,57 +957,46 @@
         const compactUpper = upper.replace(/\s+/g, '');
         const compactDigits = text.replace(/[^0-9]/g, '');
 
-        const hasOwner =
-          /GEZAHGN\s+TEREFE\s+TAMENE|GEZAHGN[\s\S]{0,20}TEREFE[\s\S]{0,20}TAMENE/i.test(upper) ||
-          (upper.includes('GEZAHGN') && upper.includes('TEREFE') && upper.includes('TAMENE'));
-        
-        const hasAccountOnReceipt = compactDigits.includes(RECEIVER_ACCOUNT_LAST4) || compactUpper.includes(RECEIVER_ACCOUNT_MASKED);
+        // STRICT SCAN CHECK: Account 1****8205 (or full 1000581888205)
+        const hasAccount =
+          compactDigits.includes(RECEIVER_ACCOUNT_FULL) ||
+          compactDigits.includes(RECEIVER_ACCOUNT_LAST4) ||
+          /1\*{2,6}8205/.test(compactUpper);
 
         const parsedAmount = parseReceiptAmount(upper);
         const isMultiple = parsedAmount >= ENTRY_FEE && parsedAmount % ENTRY_FEE === 0;
-        const chancesCount = isMultiple ? parsedAmount / ENTRY_FEE : 1;
+        const chancesCount = isMultiple ? parsedAmount / ENTRY_FEE : 0;
 
         state.detectedAmount = parsedAmount;
         state.totalChances = chancesCount;
 
-        const hasStampOrSeal =
-          /STAMP|SEAL|APPROVED|VERIFIED|COMMERCIAL\s+BANK|CBE|OFFICIAL|PAID|SUCCESS|DIGITAL|ISSUED/i.test(upper) ||
-          upper.length > 20;
-
         const enteredRef = el.receiptRef.value.trim().toUpperCase().replace(/\s+/g, '');
-        const ftMatches = upper.match(/\bFT[A-Z0-9]{6,}\b/g) || [];
-        const refValidFormat = /^FT[A-Z0-9]{6,}$/.test(enteredRef);
+        const ftMatches = upper.match(/\bFT[A-Z0-9]{8,14}\b/g) || [];
+        const refValidFormat = /^FT[A-Z0-9]{8,14}$/.test(enteredRef);
         const refInReceipt = refValidFormat && (compactUpper.includes(enteredRef) || ftMatches.includes(enteredRef));
         const refUnused = refValidFormat && !state.usedRefs.includes(enteredRef);
 
-        state.ocrChecks.owner = hasOwner;
-        state.ocrChecks.account = hasAccountOnReceipt;
+        state.ocrChecks.account = hasAccount;
         state.ocrChecks.amount = isMultiple;
-        state.ocrChecks.stamp = hasStampOrSeal;
         state.ocrChecks.refMatch = refInReceipt && refUnused;
 
         if (state.receiptFile && !state.isScanning) {
-          updateChecklistRow(el.chkOwner, hasOwner ? 'pass' : 'fail', 'Receiver Name: Gezahgn Terefe Tamene');
-          updateChecklistRow(el.chkAccount, hasAccountOnReceipt ? 'pass' : 'fail', 'Receiver CBE Account: ' + RECEIVER_ACCOUNT_MASKED);
+          updateChecklistRow(el.chkAccount, hasAccount ? 'pass' : 'fail', 'Account Check: 1****8205 / 1000581888205');
 
           if (isMultiple) {
-            updateChecklistRow(el.chkAmount, 'pass', 'Transfer Amount: ' + parsedAmount.toLocaleString() + ' ETB (' + chancesCount + ' Chances)');
+            updateChecklistRow(el.chkAmount, 'pass', 'Transfer Amount: ' + parsedAmount.toLocaleString() + ' ETB (' + chancesCount + (chancesCount === 1 ? ' Chance)' : ' Chances)'));
+          } else if (parsedAmount > 0) {
+            updateChecklistRow(el.chkAmount, 'fail', 'Detected ' + parsedAmount + ' ETB — must be a multiple of 100 ETB');
           } else {
-            updateChecklistRow(el.chkAmount, 'fail', 'Transfer Amount must be a multiple of 100 ETB (100, 200, 300...)');
-          }
-
-          if (state.ocrChecks.stamp) {
-            updateChecklistRow(el.chkStamp, 'pass', 'Official Bank Stamp / PDF Receipt Verified');
-          } else {
-            updateChecklistRow(el.chkStamp, 'fail', 'Bank Stamp / Seal indicator missing');
+            updateChecklistRow(el.chkAmount, 'fail', 'Valid ETB transfer amount (100×n ETB) not detected');
           }
 
           if (!refValidFormat) {
             updateChecklistRow(el.chkRef, 'fail', 'CBE Transaction Reference (must start with FT...)');
           } else if (!refUnused) {
-            updateChecklistRow(el.chkRef, 'fail', 'Reference already used');
+            updateChecklistRow(el.chkRef, 'fail', 'Reference ' + enteredRef + ' has already been used');
           } else if (!refInReceipt) {
-            updateChecklistRow(el.chkRef, 'fail', 'Entered FT reference not found in receipt');
+            updateChecklistRow(el.chkRef, 'fail', 'Entered FT reference not found on receipt');
           } else {
             updateChecklistRow(el.chkRef, 'pass', 'Unique CBE Transaction Reference (' + enteredRef + ')');
           }
@@ -1015,10 +1022,8 @@
         const allOcrPass =
           Boolean(state.receiptFile) &&
           !state.isScanning &&
-          state.ocrChecks.owner &&
           state.ocrChecks.account &&
           state.ocrChecks.amount &&
-          state.ocrChecks.stamp &&
           state.ocrChecks.refMatch;
 
         if (!state.receiptFile) {
@@ -1028,10 +1033,10 @@
           el.summaryReceiptStatus.textContent = 'Scanning...';
           el.summaryReceiptStatus.className = 'text-xs font-semibold text-amber-600';
         } else if (allOcrPass) {
-          el.summaryReceiptStatus.textContent = state.totalChances + ' Chances Verified ✓';
+          el.summaryReceiptStatus.textContent = state.totalChances + (state.totalChances === 1 ? ' Chance Verified ✓' : ' Chances Verified ✓');
           el.summaryReceiptStatus.className = 'text-xs font-semibold text-emerald-700';
         } else {
-          el.summaryReceiptStatus.textContent = 'Pending Details / Stamp Check';
+          el.summaryReceiptStatus.textContent = 'Scan Check Failed';
           el.summaryReceiptStatus.className = 'text-xs font-semibold text-rose-600';
         }
 
@@ -1048,7 +1053,9 @@
         state.receiptPreviewUrl = URL.createObjectURL(file);
         state.isScanning = true;
         state.ocrText = '';
-        state.ocrChecks = { owner: false, account: false, amount: false, stamp: false, refMatch: false };
+        state.detectedAmount = 0;
+        state.totalChances = 0;
+        state.ocrChecks = { account: false, amount: false, refMatch: false };
 
         if (file.type.startsWith('image/')) {
           el.receiptThumb.src = state.receiptPreviewUrl;
@@ -1057,33 +1064,32 @@
         }
 
         el.receiptFileName.textContent = file.name;
-        el.scanStatusText.textContent = 'Scanning receipt &amp; stamp (0%)...';
+        el.scanStatusText.textContent = 'Scanning for 1****8205 &amp; FT reference...';
         el.scanStatusText.className = 'text-xs font-medium text-amber-700';
         el.receiptPreviewBox.classList.remove('hidden');
         el.receiptPreviewBox.classList.add('flex');
         el.ocrChecklist.classList.remove('hidden');
 
-        updateChecklistRow(el.chkOwner, 'pending', 'Receiver Name: Gezahgn Terefe Tamene');
-        updateChecklistRow(el.chkAccount, 'pending', 'Receiver CBE Account: ' + RECEIVER_ACCOUNT_MASKED);
+        updateChecklistRow(el.chkAccount, 'pending', 'Account Check: 1****8205 / 1000581888205');
         updateChecklistRow(el.chkAmount, 'pending', 'Transfer Amount: 100×n ETB (Grants n Chances)');
-        updateChecklistRow(el.chkStamp, 'pending', 'Official Bank Stamp / Seal Indicator');
         updateChecklistRow(el.chkRef, 'pending', 'Unique Unused Transaction Reference (FT...)');
         updatePaymentFormState();
 
         try {
           if (file.type === 'application/pdf') {
-            state.ocrText = 'COMMERCIAL BANK OF ETHIOPIA GEZAHGN TEREFE TAMENE 1000581888205 200.00 ETB APPROVED STAMP FT82910283';
+            el.scanStatusText.textContent = 'Extracting text from PDF receipt...';
+            state.ocrText = await extractPdfText(file);
           } else if (typeof Tesseract !== 'undefined' && Tesseract.recognize) {
             const result = await Tesseract.recognize(file, 'eng', {
               logger: (m) => {
                 if (m && m.status === 'recognizing text' && typeof m.progress === 'number') {
-                  el.scanStatusText.textContent = 'Scanning receipt text (' + Math.round(m.progress * 100) + '%)...';
+                  el.scanStatusText.textContent = 'Scanning receipt (' + Math.round(m.progress * 100) + '%)...';
                 }
               }
             });
             state.ocrText = (result && result.data && result.data.text) ? result.data.text : '';
           } else {
-            state.ocrText = 'GEZAHGN TEREFE TAMENE 1000581888205 200 ETB STAMP FT12345678';
+            throw new Error('OCR unavailable');
           }
 
           state.isScanning = false;
@@ -1095,26 +1101,26 @@
 
           evaluateOcrAgainstInputs();
           const passed =
-            state.ocrChecks.owner &&
             state.ocrChecks.account &&
             state.ocrChecks.amount &&
-            state.ocrChecks.stamp &&
             state.ocrChecks.refMatch;
 
           if (passed) {
-            el.scanStatusText.textContent = 'Verified! (' + state.totalChances + ' Chances granted)';
+            el.scanStatusText.textContent = 'Receipt Verified! (' + state.totalChances + ' Chances granted)';
             el.scanStatusText.className = 'text-xs font-semibold text-emerald-700';
             showToast('Receipt verified successfully (' + state.totalChances + ' chances)!');
           } else {
-            el.scanStatusText.textContent = 'Verification check incomplete. Please verify details.';
+            el.scanStatusText.textContent = 'Scan check failed. Ensure account 1****8205 &amp; FT ref are valid.';
             el.scanStatusText.className = 'text-xs font-semibold text-rose-600';
-            showToast('Please check receipt details and stamp.', true);
+            showToast('Receipt rejected: account 1****8205 or FT reference not matched.', true);
           }
         } catch (err) {
           state.isScanning = false;
-          state.ocrText = 'GEZAHGN TEREFE TAMENE 1000581888205 200 ETB STAMP FT99887766';
+          state.ocrText = '';
           evaluateOcrAgainstInputs();
-          showToast('Receipt processed successfully with 2 chances.');
+          el.scanStatusText.textContent = 'Could not read receipt. Please upload a clear file.';
+          el.scanStatusText.className = 'text-xs font-semibold text-rose-600';
+          showToast('Failed to scan receipt file.', true);
         }
       }
 
@@ -1127,8 +1133,8 @@
         state.isScanning = false;
         state.ocrText = '';
         state.detectedAmount = 0;
-        state.totalChances = 1;
-        state.ocrChecks = { owner: false, account: false, amount: false, stamp: false, refMatch: false };
+        state.totalChances = 0;
+        state.ocrChecks = { account: false, amount: false, refMatch: false };
         el.receiptFile.value = '';
         el.receiptPreviewBox.classList.add('hidden');
         el.receiptPreviewBox.classList.remove('flex');
@@ -1169,7 +1175,7 @@
       function renderHistory() {
         if (state.history.length === 0) {
           el.historyList.innerHTML =
-            '<p class="text-xs">No verified draws yet. Pick a number and upload a stamped 100×n ETB receipt to start.</p>';
+            '<p class="text-xs">No verified draws yet. Pick a number and upload a receipt to start.</p>';
           return;
         }
         el.historyList.innerHTML = state.history
@@ -1322,7 +1328,7 @@
           el.winReceiptRef.textContent = data.refVal;
           el.winPlayerName.textContent = data.playerName;
           el.winNumberDisplay.textContent = '#' + data.picked + ' (Chance ' + data.currentChance + '/' + data.totalChances + ')';
-          el.winPaidDisplay.textContent = (data.totalChances * ENTRY_FEE) + ' ETB (' + data.totalChances + ' Chances)';
+          el.winPaidDisplay.textContent = (data.totalChances * ENTRY_FEE) + ' ETB (' + data.totalChances + (data.totalChances === 1 ? ' Chance)' : ' Chances)');
           el.winPrizeDisplay.textContent = PRIZE_AMOUNT.toLocaleString() + ' ETB';
 
           const alarmText =
@@ -1334,8 +1340,8 @@
             'Matched Number: #' + data.picked + '\n' +
             'Chance Won: Chance ' + data.currentChance + ' of ' + data.totalChances + '\n' +
             'Prize Won: ' + PRIZE_AMOUNT.toLocaleString() + ' ETB\n' +
-            'Receiver Owner: ' + OWNER_NAME + '\n' +
-            'Receiver CBE Account: ' + RECEIVER_ACCOUNT_MASKED + '\n' +
+            'Receiver Name: ' + OWNER_NAME + '\n' +
+            'Receiver CBE Account: ' + RECEIVER_ACCOUNT_FULL + '\n' +
             'CBE Receipt Ref: ' + data.refVal + '\n' +
             'Timestamp: ' + timestamp;
 
@@ -1366,12 +1372,14 @@
           el.lossWinningNum.textContent = '#' + data.winningNumber;
 
           if (hasMoreChances) {
-            el.lossTitle.textContent = 'Chance ' + data.currentChance + ' of ' + data.totalChances + ' — Not a Match';
+            el.lossTitle.textContent = 'Chance ' + data.currentChance + ' of ' + data.totalChances + ' — Not a Match This Time';
+            el.lossSubtext.innerHTML = 'Your chosen number <strong>#' + data.picked + '</strong> did not match (<strong>#' + data.winningNumber + '</strong>). You still have remaining chances from your paid receipt!';
             el.nextChanceNum.textContent = String(data.currentChance + 1);
-            el.continueChanceBtn.parentElement.classList.remove('hidden');
+            el.continueChanceBtn.classList.remove('hidden');
           } else {
-            el.lossTitle.textContent = 'All ' + data.totalChances + ' Chances Completed — Thank You!';
-            el.continueChanceBtn.parentElement.classList.add('hidden');
+            el.lossTitle.textContent = 'All ' + data.totalChances + (data.totalChances === 1 ? ' Chance Completed' : ' Chances Completed') + ' — Thank You!';
+            el.lossSubtext.innerHTML = 'Your chosen number <strong>#' + data.picked + '</strong> did not match (<strong>#' + data.winningNumber + '</strong>). Upload a new receipt to play again.';
+            el.continueChanceBtn.classList.add('hidden');
           }
 
           el.lossState.classList.remove('hidden');
@@ -1432,7 +1440,7 @@
 
       el.copyAccountBtn.addEventListener('click', () => {
         sfx.click();
-        copyText(RECEIVER_ACCOUNT, 'CBE account 1000581888205 copied!');
+        copyText(RECEIVER_ACCOUNT_FULL, 'CBE account 1000581888205 copied!');
       });
 
       el.receiptFile.addEventListener('change', (e) => {
@@ -1474,6 +1482,11 @@
       });
 
       el.playAgainAfterWinBtn.addEventListener('click', () => {
+        sfx.click();
+        resetForNextRound();
+      });
+
+      el.playAgainAfterLossBtn.addEventListener('click', () => {
         sfx.click();
         resetForNextRound();
       });
@@ -1534,7 +1547,7 @@
             closeAuthModal();
             showToast('Owner Test Win Mode unlocked.');
           } else {
-            el.authError.classList.remove('hidden');
+            el.authError.classList.add('hidden');
           }
         } catch (err) {
           el.authError.classList.add('hidden');
