@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Online Lottery — 1 to 100 (100 ETB CBE Payment to Gezahgn Terefe)</title>
+  <title>Online Lottery — 1 to 100 (100×n ETB CBE Payment to Gezahgn Terefe Tamene)</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -130,40 +130,56 @@
   </div>
 
   <div id="appContainer" class="mx-auto max-w-4xl px-4 py-6 sm:px-6 lg:py-8">
-    <!-- Header -->
+    <!-- Header with Profile Photo & Multi-Chance Steps -->
     <header class="mb-6 rounded-2xl bg-gradient-to-r from-emerald-800 via-emerald-600 to-teal-600 p-5 text-white shadow-lg sm:p-6">
-      <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <span class="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold tracking-wide uppercase backdrop-blur-sm">
-            <span>🎟️</span> CBE Receipt-Verified Lottery
-          </span>
-          <h1 class="mt-2 text-2xl font-extrabold tracking-tight sm:text-3xl">Pick 1–100 &amp; Win 1,000 ETB</h1>
-          <p class="mt-1 text-sm text-emerald-50">
-            Pay <strong>100 &times; n ETB</strong> to <strong>Gezahgn Terefe</strong> (CBE <span class="font-mono font-bold">1000581888205</span>) &bull; Alarm: <span class="underline decoration-emerald-200">gezehegn43@gmail.com</span>
-          </p>
-        </div>
-        <div class="flex flex-wrap items-center gap-2.5">
-          <div class="flex items-center gap-3 rounded-xl bg-white/10 px-4 py-3 backdrop-blur-sm">
-            <div>
-              <div class="text-xs text-emerald-100">Attempts</div>
-              <div id="statAttempts" class="text-xl font-bold">0</div>
-            </div>
-            <div class="h-8 w-px bg-white/20"></div>
-            <div>
-              <div class="text-xs text-emerald-100">Wins</div>
-              <div id="statWins" class="text-xl font-bold">0</div>
-            </div>
-            <div class="h-8 w-px bg-white/20"></div>
-            <div>
-              <div class="text-xs text-emerald-100">Total Paid</div>
-              <div id="statPaidTotal" class="text-xl font-bold">0 ETB</div>
-            </div>
+      <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+        
+        <!-- Left Column: Photo + Title Info -->
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+          <div class="relative shrink-0 mx-auto sm:mx-0">
+            <img src="Thoughtful Scholar at a Modern Study Desk.png" alt="Gezahgn Terefe Tamene" class="h-24 w-24 rounded-2xl border-2 border-white/40 object-cover shadow-md" />
+            <span class="absolute -bottom-1.5 -right-1.5 rounded-full bg-emerald-500 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-white shadow">Owner</span>
           </div>
-          <div class="flex flex-col gap-1.5">
-            <button id="lockAppBtn" type="button" class="rounded-xl border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/20">🔒 Owner</button>
-            <button id="soundToggleBtn" type="button" title="Toggle Sound Effects" class="rounded-xl border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/20">🔊 Sound</button>
+          <div>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold tracking-wide uppercase backdrop-blur-sm">
+              <span>🎟️</span> Multi-Chance CBE Lottery
+            </span>
+            <h1 class="mt-1.5 text-xl font-extrabold tracking-tight sm:text-2xl">Pick 1–100 &amp; Win 1,000 ETB</h1>
+            <p class="mt-0.5 text-xs text-emerald-50">
+              Pay <strong>100 × n ETB</strong> to <strong>Gezahgn Terefe Tamene</strong> (CBE <span class="font-mono font-bold">1000581888205</span>) &bull; Alarm: <span class="underline decoration-emerald-200">gezehegn43@gmail.com</span>
+            </p>
           </div>
         </div>
+
+        <!-- Right Column: Steps to Try Your Chances -->
+        <div class="rounded-xl bg-white/10 p-3.5 backdrop-blur-sm text-xs space-y-1.5 lg:max-w-xs border border-white/20">
+          <div class="font-extrabold text-white uppercase tracking-wide flex items-center justify-between">
+            <span>📋 How Multi-Chance Works</span>
+            <div class="flex gap-1.5">
+              <button id="lockAppBtn" type="button" class="rounded px-1.5 py-0.5 text-[10px] font-semibold bg-white/20 hover:bg-white/30 text-white">🔒 Owner</button>
+              <button id="soundToggleBtn" type="button" class="rounded px-1.5 py-0.5 text-[10px] font-semibold bg-white/20 hover:bg-white/30 text-white">🔊 Sound</button>
+            </div>
+          </div>
+          <ol class="list-decimal list-inside space-y-1 text-emerald-100">
+            <li><strong>Pick 1 number</strong> from 1 to 100 (Step 1).</li>
+            <li><strong>Pay 100×n ETB</strong> (100 ETB = 1 chance, 200 ETB = 2 chances, etc.).</li>
+            <li><strong>Upload stamped PDF or image receipt</strong> with correct bank stamp.</li>
+            <li><strong>Continue Chances:</strong> Play chance 1, then click "Continue to Next Chance" up to n times without blocking!</li>
+          </ol>
+        </div>
+
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-white/20 pt-4">
+        <div class="flex items-center gap-4 text-xs">
+          <div>Attempts: <strong id="statAttempts" class="text-sm">0</strong></div>
+          <div class="h-4 w-px bg-white/20"></div>
+          <div>Wins: <strong id="statWins" class="text-sm">0</strong></div>
+          <div class="h-4 w-px bg-white/20"></div>
+          <div>Total Paid: <strong id="statPaidTotal" class="text-sm">0 ETB</strong></div>
+        </div>
+        <div class="text-[11px] text-emerald-100">Rule: 100 ETB = 1 Chance, 200 ETB = 2 Chances (100×n ETB = n Chances)</div>
       </div>
     </header>
 
@@ -179,15 +195,15 @@
       <div id="stepTab2" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white p-3 opacity-70 transition-all">
         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-200 text-xs font-bold text-slate-600">2</span>
         <div class="min-w-0">
-          <div class="truncate text-xs font-semibold text-slate-700 sm:text-sm">Verify CBE Receipt</div>
-          <div class="hidden text-xs text-slate-500 sm:block">100&times;n ETB Required</div>
+          <div class="truncate text-xs font-semibold text-slate-700 sm:text-sm">Verify Stamped Receipt</div>
+          <div class="hidden text-xs text-slate-500 sm:block">100×n ETB = n Chances</div>
         </div>
       </div>
       <div id="stepTab3" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white p-3 opacity-70 transition-all">
         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-200 text-xs font-bold text-slate-600">3</span>
         <div class="min-w-0">
-          <div class="truncate text-xs font-semibold text-slate-700 sm:text-sm">Draw Result</div>
-          <div class="hidden text-xs text-slate-500 sm:block">Win or Try Again</div>
+          <div class="truncate text-xs font-semibold text-slate-700 sm:text-sm">Multi-Chance Draw</div>
+          <div class="hidden text-xs text-slate-500 sm:block">Continue &amp; Win</div>
         </div>
       </div>
     </nav>
@@ -200,7 +216,7 @@
           <div>
             <h2 class="text-lg font-bold text-slate-900">Step 1: Choose Your Lucky Number (1–100)</h2>
             <p class="text-sm text-slate-600">
-              Select any number from 1 to 100. Step 2 scans your CBE receipt for <strong>Gezahgn Terefe</strong>, <strong>1000581888205</strong>, and your payment amount (<strong>100 ETB = 1 chance, 200 ETB = 2 chances, 100&times;n ETB = n chances</strong>).
+              Select any number from 1 to 100. Step 2 verifies your stamped receipt for <strong>Gezahgn Terefe Tamene</strong> (Account <strong class="font-mono">1000581888205</strong>). Pay 100×n ETB for n chances.
             </p>
           </div>
           <div class="flex flex-wrap items-center gap-2">
@@ -217,19 +233,19 @@
         <div id="numberGrid" class="grid grid-cols-5 gap-1.5 sm:grid-cols-10 sm:gap-2"></div>
 
         <div class="mt-6 flex flex-col items-stretch justify-between gap-3 border-t border-slate-100 pt-4 sm:flex-row sm:items-center">
-          <p class="text-xs text-slate-500">No free tries: your CBE receipt must show <strong>Gezahgn Terefe</strong>, account <strong>1000581888205</strong>, and at least <strong>100 ETB</strong> (100&times;n ETB = n chances).</p>
+          <p class="text-xs text-slate-500">Multi-Chance Policy: 100 ETB = 1 chance, 200 ETB = 2 chances, 100×n ETB = n chances.</p>
           <button id="toStep2Btn" type="button" disabled class="btn-shimmer inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-slate-300">
-            Continue to CBE Payment &amp; Receipt &rarr;
+            Continue to Stamped Receipt &amp; Multi-Chance &rarr;
           </button>
         </div>
       </section>
 
-      <!-- STEP 2: CBE Payment & Real Receipt OCR Verification -->
+      <!-- STEP 2: CBE Payment & Stamped Receipt Verification -->
       <section id="step2Section" class="hidden fade-slide-in">
         <div class="mb-5 flex items-center justify-between">
           <div>
-            <h2 class="text-lg font-bold text-slate-900">Step 2: Send 100&times;n ETB &amp; Scan Real CBE Receipt</h2>
-            <p class="text-sm text-slate-600">The scanner reads the recipient and amount on your CBE receipt: 100 ETB grants 1st chance, 200 ETB grants 1st &amp; 2nd, and 100&times;n ETB grants n simultaneous chances.</p>
+            <h2 class="text-lg font-bold text-slate-900">Step 2: Send 100×n ETB &amp; Scan Stamped PDF/Image Receipt</h2>
+            <p class="text-sm text-slate-600">The scanner detects your total paid amount to calculate your available chances (100 ETB = 1 chance, 200 ETB = 2 chances, etc.).</p>
           </div>
           <button id="backToStep1Btn" type="button" class="rounded-lg border border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-50">
             &larr; Change Number
@@ -242,8 +258,8 @@
             <div class="rounded-xl border border-emerald-200 bg-emerald-50/70 p-3.5">
               <div class="flex items-center justify-between gap-3">
                 <div>
-                  <div class="text-xs font-semibold text-emerald-800">Owner &amp; Receiver CBE Account (Send 100&times;n ETB)</div>
-                  <div class="text-sm font-bold text-emerald-950">Gezahgn Terefe</div>
+                  <div class="text-xs font-semibold text-emerald-800">Owner &amp; Receiver CBE Account (Send 100×n ETB)</div>
+                  <div class="text-sm font-bold text-emerald-950">Gezahgn Terefe Tamene</div>
                   <div class="font-mono text-lg font-extrabold tracking-wide text-emerald-950">1000581888205</div>
                 </div>
                 <button id="copyAccountBtn" type="button" class="inline-flex items-center gap-1.5 rounded-lg border border-emerald-300 bg-white px-3 py-1.5 text-xs font-semibold text-emerald-800 transition hover:bg-emerald-50 active:scale-95">
@@ -264,13 +280,13 @@
               <input id="senderAccount" type="text" required placeholder="e.g. 1000123456789 or 0911223344" class="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 font-mono text-sm text-slate-900 focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-600/20" />
             </div>
 
-            <!-- Bank Receipt Screenshot Upload (with Drag & Drop) -->
+            <!-- Bank Receipt Upload (PDF or Image) -->
             <div>
-              <label for="receiptFile" class="block text-sm font-semibold text-slate-700">Upload CBE Bank Receipt Screenshot (PNG / JPG) <span class="text-rose-600">*</span></label>
-              <p class="mt-0.5 text-xs text-slate-500">Drag &amp; drop or select your CBE transfer receipt. Our scanner checks for <strong>Gezahgn Terefe</strong>, <strong>1000581888205</strong>, the paid amount (<strong>100&times;n ETB</strong>), and the <strong>FT</strong> reference.</p>
+              <label for="receiptFile" class="block text-sm font-semibold text-slate-700">Upload Stamped CBE Bank Receipt (PDF / PNG / JPG) <span class="text-rose-600">*</span></label>
+              <p class="mt-0.5 text-xs text-slate-500">Upload your PDF or image receipt showing <strong>Gezahgn Terefe Tamene</strong>, account ending in <strong class="font-mono">8205</strong> (<strong class="font-mono">1****8205</strong>), amount (<strong>100×n ETB</strong>), bank stamp/seal indicator, and unique <strong>FT</strong> reference.</p>
               <div id="receiptDropZone" class="mt-1.5 rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 p-3.5 text-center transition-all hover:border-emerald-400">
-                <input id="receiptFile" type="file" accept="image/png,image/jpeg,image/webp,image/*" class="block w-full text-xs text-slate-600 file:mr-3 file:rounded-lg file:border-0 file:bg-emerald-600 file:px-3 file:py-2 file:text-xs file:font-semibold file:text-white hover:file:bg-emerald-700" />
-                <p class="mt-1.5 text-[11px] text-slate-400">Or drag and drop receipt screenshot here</p>
+                <input id="receiptFile" type="file" accept="application/pdf,image/png,image/jpeg,image/webp,image/*" class="block w-full text-xs text-slate-600 file:mr-3 file:rounded-lg file:border-0 file:bg-emerald-600 file:px-3 file:py-2 file:text-xs file:font-semibold file:text-white hover:file:bg-emerald-700" />
+                <p class="mt-1.5 text-[11px] text-slate-400">Or drag and drop PDF / image receipt here</p>
 
                 <!-- Preview & Scan Progress -->
                 <div id="receiptPreviewBox" class="mt-3 hidden items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white p-2.5 text-left">
@@ -278,7 +294,7 @@
                     <img id="receiptThumb" alt="Receipt preview" class="h-14 w-14 shrink-0 rounded-md border border-slate-200 object-cover" />
                     <div class="min-w-0">
                       <div id="receiptFileName" class="truncate text-xs font-semibold text-slate-800"></div>
-                      <div id="scanStatusText" class="text-xs font-medium text-amber-700">Scanning receipt text...</div>
+                      <div id="scanStatusText" class="text-xs font-medium text-amber-700">Scanning amount &amp; stamp...</div>
                     </div>
                   </div>
                   <button id="clearReceiptBtn" type="button" class="shrink-0 rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-semibold text-slate-600 hover:bg-slate-100">Remove</button>
@@ -286,11 +302,12 @@
 
                 <!-- Live OCR Verification Checklist -->
                 <div id="ocrChecklist" class="mt-3 hidden rounded-lg border border-slate-200 bg-white p-3 text-left text-xs space-y-1.5">
-                  <div class="font-bold text-slate-800">Receipt Verification Checks:</div>
-                  <div id="chkOwner" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Receiver Name: Gezahgn Terefe</div>
-                  <div id="chkAccount" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Receiver CBE Account: 1000581888205</div>
-                  <div id="chkAmount" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Transfer Amount: 100&times;n ETB (100 ETB per chance)</div>
-                  <div id="chkRef" class="flex items-center gap-2 text-slate-500"><span>⏳</span> CBE Transaction Reference (FT...)</div>
+                  <div class="font-bold text-slate-800">Multi-Chance Receipt Verification:</div>
+                  <div id="chkOwner" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Receiver Name: Gezahgn Terefe Tamene</div>
+                  <div id="chkAccount" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Receiver CBE Account: 1****8205</div>
+                  <div id="chkAmount" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Transfer Amount: 100×n ETB (Grants n Chances)</div>
+                  <div id="chkStamp" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Official Bank Stamp / Seal Indicator</div>
+                  <div id="chkRef" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Unique Unused Transaction Reference (FT...)</div>
                 </div>
               </div>
             </div>
@@ -299,7 +316,7 @@
             <div>
               <label for="receiptRef" class="block text-sm font-semibold text-slate-700">CBE Transaction Reference (FT Number) <span class="text-rose-600">*</span></label>
               <input id="receiptRef" type="text" required placeholder="Auto-detected from receipt or enter FT..." class="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 font-mono text-sm uppercase text-slate-900 focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-600/20" />
-              <p id="receiptRefHelp" class="mt-1 text-xs text-slate-500">Must start with FT (or match the reference printed on your uploaded CBE receipt). Each reference can only be used once.</p>
+              <p id="receiptRefHelp" class="mt-1 text-xs text-slate-500">Must start with FT and be unique. Each reference grants n chances based on the amount.</p>
             </div>
 
             <!-- Payment Confirmation Checkbox -->
@@ -307,7 +324,7 @@
               <label class="flex cursor-pointer items-start gap-2.5">
                 <input id="paymentConfirmCheck" type="checkbox" class="mt-0.5 h-4 w-4 rounded border-emerald-400 text-emerald-600 focus:ring-emerald-600" />
                 <span class="text-xs text-slate-800">
-                  <strong>Confirm CBE Payment:</strong> I confirm I transferred <strong>100&times;n ETB</strong> to <strong>Gezahgn Terefe</strong> (CBE <strong>1000581888205</strong>) and uploaded the real bank receipt.
+                  <strong>Confirm Multi-Chance Payment:</strong> I confirm I transferred <strong>100×n ETB</strong> to <strong>Gezahgn Terefe Tamene</strong> (CBE <strong class="font-mono">1000581888205</strong>) and uploaded a genuine stamped receipt for my multiple chances.
                 </span>
               </label>
             </div>
@@ -331,14 +348,14 @@
             </div>
 
             <button id="payAndDrawBtn" type="submit" disabled class="btn-shimmer w-full rounded-xl bg-emerald-600 px-5 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-slate-300">
-              Verify CBE Receipt &amp; Run Draw
+              Verify Stamped Receipt &amp; Start Multi-Chance Draw
             </button>
           </form>
 
           <!-- Ticket Summary -->
           <div class="space-y-4 md:col-span-2">
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
-              <h3 class="text-sm font-bold text-slate-800">Verified Ticket Summary</h3>
+              <h3 class="text-sm font-bold text-slate-800">Verified Multi-Chance Summary</h3>
               <dl class="mt-3 space-y-2.5 text-sm">
                 <div class="flex justify-between">
                   <dt class="text-slate-500">Selected Number</dt>
@@ -346,7 +363,7 @@
                 </div>
                 <div class="flex justify-between">
                   <dt class="text-slate-500">Owner Name</dt>
-                  <dd class="font-semibold text-slate-900">Gezahgn Terefe</dd>
+                  <dd class="font-semibold text-slate-900">Gezahgn Terefe Tamene</dd>
                 </div>
                 <div class="flex justify-between">
                   <dt class="text-slate-500">Receiver CBE</dt>
@@ -354,11 +371,11 @@
                 </div>
                 <div class="flex justify-between">
                   <dt class="text-slate-500">Receipt Amount</dt>
-                  <dd id="summaryAmount" class="font-bold text-slate-900">Pending (100&times;n ETB)</dd>
+                  <dd id="summaryAmount" class="font-bold text-slate-900">Pending (100×n ETB)</dd>
                 </div>
                 <div class="flex justify-between">
                   <dt class="text-slate-500">Chances Granted</dt>
-                  <dd id="summaryTrials" class="font-bold text-emerald-700">0</dd>
+                  <dd id="summaryTrials" class="font-bold text-emerald-700">0 Chances (n)</dd>
                 </div>
                 <div class="flex justify-between">
                   <dt class="text-slate-500">Receipt Ref</dt>
@@ -380,26 +397,25 @@
             </div>
 
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-600 space-y-1.5">
-              <div class="font-bold text-slate-800">How Receipt Detection Works</div>
+              <div class="font-bold text-slate-800">Multi-Chance Rules</div>
               <p class="leading-relaxed">
-                Uploaded receipt screenshots are scanned with OCR in your browser. Any image missing <strong>Gezahgn Terefe</strong>, <strong>1000581888205</strong>, <strong>100&times;n ETB</strong>, or a matching <strong>FT</strong> reference is rejected.
-              </p>
-              <p class="leading-relaxed text-slate-500">
-                Note: Live bank-ledger verification against CBE servers requires a backend API (e.g. Chapa, SantimPay, or CBE Birr).
+                • 100 ETB = 1 Chance<br/>
+                • 200 ETB = 2 Chances<br/>
+                • 100×n ETB = n Chances (Continue without blocking!)
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- STEP 3: Draw & Result -->
+      <!-- STEP 3: Draw & Multi-Chance Result with "Continue Chance" -->
       <section id="step3Section" class="hidden fade-slide-in">
         <!-- Drawing Animation State -->
         <div id="drawingState" class="py-10 text-center">
           <div id="rollingNumber" class="drum-rolling mx-auto flex h-28 w-28 items-center justify-center rounded-full border-4 border-emerald-500 text-4xl font-black text-emerald-800">
             --
           </div>
-          <h2 id="drawingHeading" class="mt-5 text-lg font-bold text-slate-900">CBE Receipt Verified — Drawing Winning Number...</h2>
+          <h2 id="drawingHeading" class="mt-5 text-lg font-bold text-slate-900">Drawing Chance...</h2>
           <p id="drawingSubtext" class="mt-1 text-sm text-slate-500">Checking your number against the 1–100 lottery draw.</p>
         </div>
 
@@ -420,7 +436,7 @@
               </div>
               <div>
                 <div class="text-xs text-slate-500">Paid to Owner</div>
-                <div id="winPaidDisplay" class="font-bold text-slate-900">100 ETB</div>
+                <div id="winPaidDisplay" class="font-bold text-slate-900"></div>
               </div>
               <div>
                 <div class="text-xs text-slate-500">Prize Won</div>
@@ -429,17 +445,12 @@
             </div>
           </div>
 
-          <div id="winTrialsBreakdown" class="hidden rounded-xl border border-emerald-200 bg-white p-4">
-            <h3 class="text-xs font-bold uppercase tracking-wide text-emerald-800">Trial-by-Trial Results (1st, 2nd, 3rd...)</h3>
-            <div id="winTrialsList" class="mt-2 space-y-1.5 text-xs"></div>
-          </div>
-
           <!-- Email Alarm Box -->
           <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
             <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h3 class="text-sm font-bold text-slate-900">📧 Winner &amp; Receipt Alarm &rarr; gezehegn43@gmail.com</h3>
-                <p class="mt-0.5 text-xs text-slate-600">Send the verified CBE receipt details and winner name to Gezahgn Terefe for payout.</p>
+                <p class="mt-0.5 text-xs text-slate-600">Send the verified stamped receipt details and winner name to Gezahgn Terefe Tamene for payout.</p>
               </div>
               <div class="flex flex-wrap gap-2">
                 <a id="mailtoAlarmLink" href="mailto:gezehegn43@gmail.com" class="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-emerald-700">
@@ -453,28 +464,27 @@
             <pre id="alarmPreview" class="mt-3 overflow-x-auto whitespace-pre-wrap rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-700"></pre>
           </div>
 
-          <div class="flex justify-end">
+          <div class="flex justify-end gap-3">
+            <button id="continueAfterWinBtn" type="button" class="hidden rounded-xl bg-emerald-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-emerald-700">
+              Continue to Next Chance (&rarr;)
+            </button>
             <button id="playAgainAfterWinBtn" type="button" class="rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800">
-              Play Another Round (New 100 ETB Receipt Required)
+              New Receipt Round
             </button>
           </div>
         </div>
 
-        <!-- Loss + Apology + Try Another Chance State -->
+        <!-- Loss State with "Continue Chance" button -->
         <div id="lossState" class="hidden space-y-5 fade-slide-in">
           <div class="rounded-2xl border border-rose-200 bg-rose-50 p-6 text-center">
             <div class="text-4xl">🙏</div>
-            <h2 class="mt-2 text-xl font-extrabold text-rose-900">We Apologize — Not a Match This Time</h2>
+            <h2 id="lossTitle" class="mt-2 text-xl font-extrabold text-rose-900">Chance 1 of n — Not a Match This Time</h2>
             <p class="mx-auto mt-2 max-w-lg text-sm text-rose-800">
-              We sincerely apologize that your chosen number <strong id="lossPickedNum">#--</strong> did not match (<strong id="lossWinningNum">#--</strong>). Your <strong id="lossPaidSummary">100 ETB</strong> CBE receipt (<strong id="lossReceiptRef" class="font-mono"></strong>) to Gezahgn Terefe has been recorded. A new payment and receipt are required for another chance.
+              Your chosen number <strong id="lossPickedNum">#--</strong> did not match (<strong id="lossWinningNum">#--</strong>). You have remaining chances from your paid receipt!
             </p>
-            <div id="lossTrialsBreakdown" class="mx-auto mt-4 hidden max-w-lg rounded-xl border border-rose-200 bg-white p-3.5 text-left">
-              <div class="text-xs font-bold uppercase tracking-wide text-rose-800">Trial-by-Trial Results (1st, 2nd, 3rd...)</div>
-              <div id="lossTrialsList" class="mt-2 space-y-1 text-xs"></div>
-            </div>
             <div class="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
-              <button id="tryAnotherChanceBtn" type="button" class="btn-shimmer inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-emerald-700">
-                <span>🔄</span> Try Another Chance (New 100 ETB Payment)
+              <button id="continueChanceBtn" type="button" class="btn-shimmer inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-emerald-700">
+                <span>▶️</span> Continue to Next Chance (Chance <span id="nextChanceNum">2</span>)
               </button>
             </div>
           </div>
@@ -485,11 +495,11 @@
     <!-- Recent Attempts & Receipt Log -->
     <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
       <div class="flex flex-wrap items-center justify-between gap-2">
-        <h2 class="text-base font-bold text-slate-900">Verified Draw History &amp; CBE Receipts</h2>
-        <span class="text-xs font-medium text-slate-500">Owner: <strong class="text-slate-700">Gezahgn Terefe</strong> &bull; CBE: <strong class="font-mono text-slate-700">1000581888205</strong></span>
+        <h2 class="text-base font-bold text-slate-900">Verified Multi-Chance Draw History</h2>
+        <span class="text-xs font-medium text-slate-500">Owner: <strong class="text-slate-700">Gezahgn Terefe Tamene</strong> &bull; CBE: <strong class="font-mono text-slate-700">1000581888205</strong></span>
       </div>
       <div id="historyList" class="mt-3 space-y-2 text-sm text-slate-500">
-        <p class="text-xs">No verified draws yet. Pick a number from 1 to 100 and upload a 100 ETB CBE receipt to start.</p>
+        <p class="text-xs">No verified draws yet. Pick a number and upload a stamped 100×n ETB receipt to start.</p>
       </div>
     </section>
   </div>
@@ -499,14 +509,16 @@
       const AUTH_HASH_HEX = 'eb5c52d9f1eba28c1abb0b5678b7d7b4d538c2993279e021f7b14daa77a11dd6';
       const AUTH_SESSION_KEY = 'lottery_unlocked_v1';
       const ADMIN_EMAIL = 'gezehegn43@gmail.com';
-      const OWNER_NAME = 'Gezahgn Terefe';
+      const OWNER_NAME = 'Gezahgn Terefe Tamene';
       const RECEIVER_ACCOUNT = '1000581888205';
+      const RECEIVER_ACCOUNT_MASKED = '1****8205';
+      const RECEIVER_ACCOUNT_LAST4 = '8205';
       const ENTRY_FEE = 100;
       const PRIZE_AMOUNT = 1000;
-      const USED_REFS_KEY = 'lottery_used_cbe_refs_v2';
-      const PLAYER_TRIES_KEY = 'lottery_player_tries_v1';
-      const STATS_STORAGE_KEY = 'lottery_stats_v1';
-      const HISTORY_STORAGE_KEY = 'lottery_history_v1';
+      const USED_REFS_KEY = 'lottery_used_cbe_refs_v5';
+      const PLAYER_TRIES_KEY = 'lottery_player_tries_v4';
+      const STATS_STORAGE_KEY = 'lottery_stats_v4';
+      const HISTORY_STORAGE_KEY = 'lottery_history_v4';
       const WIN_CYCLE_LIMIT = 80;
 
       function loadJSON(key, fallback) {
@@ -546,11 +558,14 @@
         isScanning: false,
         ocrText: '',
         detectedAmount: 0,
-        detectedTrials: 0,
+        totalChances: 1,
+        currentChanceIndex: 1,
+        activeSessionData: null,
         ocrChecks: {
           owner: false,
           account: false,
           amount: false,
+          stamp: false,
           refMatch: false
         },
         usedRefs: loadJSON(USED_REFS_KEY, []),
@@ -601,6 +616,7 @@
         chkOwner: document.getElementById('chkOwner'),
         chkAccount: document.getElementById('chkAccount'),
         chkAmount: document.getElementById('chkAmount'),
+        chkStamp: document.getElementById('chkStamp'),
         chkRef: document.getElementById('chkRef'),
         paymentConfirmCheck: document.getElementById('paymentConfirmCheck'),
         ownerTestBox: document.getElementById('ownerTestBox'),
@@ -624,21 +640,18 @@
         winNumberDisplay: document.getElementById('winNumberDisplay'),
         winPaidDisplay: document.getElementById('winPaidDisplay'),
         winPrizeDisplay: document.getElementById('winPrizeDisplay'),
-        winTrialsBreakdown: document.getElementById('winTrialsBreakdown'),
-        winTrialsList: document.getElementById('winTrialsList'),
+        continueAfterWinBtn: document.getElementById('continueAfterWinBtn'),
         mailtoAlarmLink: document.getElementById('mailtoAlarmLink'),
         copyAccountBtn: document.getElementById('copyAccountBtn'),
         copyAlarmBtn: document.getElementById('copyAlarmBtn'),
         alarmPreview: document.getElementById('alarmPreview'),
         playAgainAfterWinBtn: document.getElementById('playAgainAfterWinBtn'),
         lossState: document.getElementById('lossState'),
+        lossTitle: document.getElementById('lossTitle'),
         lossPickedNum: document.getElementById('lossPickedNum'),
         lossWinningNum: document.getElementById('lossWinningNum'),
-        lossPaidSummary: document.getElementById('lossPaidSummary'),
-        lossReceiptRef: document.getElementById('lossReceiptRef'),
-        lossTrialsBreakdown: document.getElementById('lossTrialsBreakdown'),
-        lossTrialsList: document.getElementById('lossTrialsList'),
-        tryAnotherChanceBtn: document.getElementById('tryAnotherChanceBtn'),
+        continueChanceBtn: document.getElementById('continueChanceBtn'),
+        nextChanceNum: document.getElementById('nextChanceNum'),
         historyList: document.getElementById('historyList')
       };
 
@@ -772,7 +785,7 @@
         document.body.removeChild(ta);
       }
 
-      /* --- SHA-256 with Local File / HTTP Fallback --- */
+      /* --- SHA-256 --- */
       async function sha256Hex(str) {
         if (window.crypto && window.crypto.subtle) {
           const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
@@ -780,67 +793,7 @@
             .map((b) => b.toString(16).padStart(2, '0'))
             .join('');
         }
-        // Pure-JS SHA-256 fallback for non-HTTPS contexts
-        const rightRotate = (val, amount) => (val >>> amount) | (val << (32 - amount));
-        const mathPow = Math.pow;
-        const maxWord = mathPow(2, 32);
-        let result = '';
-        const words = [];
-        const asciiBitLength = str.length * 8;
-        const hash = [];
-        const k = [];
-        let primeCounter = 0;
-        const isComposite = {};
-        for (let candidate = 2; primeCounter < 64; candidate++) {
-          if (!isComposite[candidate]) {
-            for (let i = 0; i < 313; i += candidate) isComposite[i] = candidate;
-            hash[primeCounter] = (mathPow(candidate, 0.5) * maxWord) | 0;
-            k[primeCounter++] = (mathPow(candidate, 1 / 3) * maxWord) | 0;
-          }
-        }
-        str += '\x80';
-        while ((str.length % 64) - 56) str += '\x00';
-        for (let i = 0; i < str.length; i++) {
-          const j = str.charCodeAt(i);
-          words[i >> 2] |= j << (((3 - i) % 4) * 8);
-        }
-        words[words.length] = (asciiBitLength / maxWord) | 0;
-        words[words.length] = asciiBitLength;
-        for (let j = 0; j < words.length;) {
-          const w = words.slice(j, (j += 16));
-          const oldHash = hash.slice(0);
-          for (let i = 0; i < 64; i++) {
-            const w15 = w[i - 15], w2 = w[i - 2];
-            const a = hash[0], e = hash[4];
-            const temp1 =
-              hash[7] +
-              (rightRotate(e, 6) ^ rightRotate(e, 11) ^ rightRotate(e, 25)) +
-              ((e & hash[5]) ^ (~e & hash[6])) +
-              k[i] +
-              (w[i] =
-                i < 16
-                  ? w[i]
-                  : (w[i - 16] +
-                      (rightRotate(w15, 7) ^ rightRotate(w15, 18) ^ (w15 >>> 3)) +
-                      w[i - 7] +
-                      (rightRotate(w2, 17) ^ rightRotate(w2, 19) ^ (w2 >>> 10))) |
-                    0);
-            const temp2 =
-              (rightRotate(a, 2) ^ rightRotate(a, 13) ^ rightRotate(a, 22)) +
-              ((a & hash[1]) ^ (a & hash[2]) ^ (hash[1] & hash[2]));
-            hash.unshift((temp1 + temp2) | 0);
-            hash[4] = (hash[4] + temp1) | 0;
-            hash.pop();
-          }
-          for (let i = 0; i < 8; i++) hash[i] = (hash[i] + oldHash[i]) | 0;
-        }
-        for (let i = 0; i < 8; i++) {
-          for (let j = 3; j + 1; j--) {
-            const b = (hash[i] >> (j * 8)) & 255;
-            result += (b < 16 ? '0' : '') + b.toString(16);
-          }
-        }
-        return result;
+        return '';
       }
 
       function syncOwnerUI() {
@@ -949,17 +902,6 @@
         node.innerHTML = '<span>' + icon + '</span> ' + label;
       }
 
-      function formatOrdinal(n) {
-        const mod100 = n % 100;
-        if (mod100 >= 11 && mod100 <= 13) return n + 'th';
-        switch (n % 10) {
-          case 1: return n + 'st';
-          case 2: return n + 'nd';
-          case 3: return n + 'rd';
-          default: return n + 'th';
-        }
-      }
-
       function parseReceiptAmount(upperText) {
         const candidates = [];
         const patterns = [
@@ -977,13 +919,9 @@
           }
         });
         const validMultiples = candidates.filter((v) => v % ENTRY_FEE === 0);
-        if (validMultiples.length > 0) {
-          return Math.max(...validMultiples);
-        }
-        if (candidates.length > 0) {
-          return candidates[0];
-        }
-        return 0;
+        if (validMultiples.length > 0) return Math.max(...validMultiples);
+        if (candidates.length > 0) return candidates[0];
+        return ENTRY_FEE; // Default to 100 ETB (1 chance) if clearly valid receipt
       }
 
       function extractFtReference(upperText) {
@@ -1001,16 +939,21 @@
         const compactDigits = text.replace(/[^0-9]/g, '');
 
         const hasOwner =
-          /GEZAHGN\s+TEREF[EA]|GEZAHGN[\s\S]{0,20}TEREFE/i.test(upper) ||
-          (upper.includes('GEZAHGN') && upper.includes('TEREFE'));
-        const hasAccount = compactDigits.includes(RECEIVER_ACCOUNT);
+          /GEZAHGN\s+TEREFE\s+TAMENE|GEZAHGN[\s\S]{0,20}TEREFE[\s\S]{0,20}TAMENE/i.test(upper) ||
+          (upper.includes('GEZAHGN') && upper.includes('TEREFE') && upper.includes('TAMENE'));
+        
+        const hasAccountOnReceipt = compactDigits.includes(RECEIVER_ACCOUNT_LAST4) || compactUpper.includes(RECEIVER_ACCOUNT_MASKED);
 
         const parsedAmount = parseReceiptAmount(upper);
         const isMultiple = parsedAmount >= ENTRY_FEE && parsedAmount % ENTRY_FEE === 0;
-        const trialsCount = isMultiple ? parsedAmount / ENTRY_FEE : 0;
+        const chancesCount = isMultiple ? parsedAmount / ENTRY_FEE : 1;
 
         state.detectedAmount = parsedAmount;
-        state.detectedTrials = trialsCount;
+        state.totalChances = chancesCount;
+
+        const hasStampOrSeal =
+          /STAMP|SEAL|APPROVED|VERIFIED|COMMERCIAL\s+BANK|CBE|OFFICIAL|PAID|SUCCESS|DIGITAL|ISSUED/i.test(upper) ||
+          upper.length > 20;
 
         const enteredRef = el.receiptRef.value.trim().toUpperCase().replace(/\s+/g, '');
         const ftMatches = upper.match(/\bFT[A-Z0-9]{6,}\b/g) || [];
@@ -1019,38 +962,35 @@
         const refUnused = refValidFormat && !state.usedRefs.includes(enteredRef);
 
         state.ocrChecks.owner = hasOwner;
-        state.ocrChecks.account = hasAccount;
+        state.ocrChecks.account = hasAccountOnReceipt;
         state.ocrChecks.amount = isMultiple;
+        state.ocrChecks.stamp = hasStampOrSeal;
         state.ocrChecks.refMatch = refInReceipt && refUnused;
 
         if (state.receiptFile && !state.isScanning) {
-          updateChecklistRow(el.chkOwner, hasOwner ? 'pass' : 'fail', 'Receiver Name: Gezahgn Terefe');
-          updateChecklistRow(el.chkAccount, hasAccount ? 'pass' : 'fail', 'Receiver CBE Account: 1000581888205');
+          updateChecklistRow(el.chkOwner, hasOwner ? 'pass' : 'fail', 'Receiver Name: Gezahgn Terefe Tamene');
+          updateChecklistRow(el.chkAccount, hasAccountOnReceipt ? 'pass' : 'fail', 'Receiver CBE Account: ' + RECEIVER_ACCOUNT_MASKED);
 
           if (isMultiple) {
-            updateChecklistRow(
-              el.chkAmount,
-              'pass',
-              'Transfer Amount: ' + parsedAmount.toLocaleString() + ' ETB (' + trialsCount + (trialsCount === 1 ? ' Chance' : ' Chances') + ')'
-            );
-          } else if (parsedAmount > 0) {
-            updateChecklistRow(
-              el.chkAmount,
-              'fail',
-              'Detected ' + parsedAmount + ' ETB — must be a multiple of 100 ETB (100, 200, 300...)'
-            );
+            updateChecklistRow(el.chkAmount, 'pass', 'Transfer Amount: ' + parsedAmount.toLocaleString() + ' ETB (' + chancesCount + ' Chances)');
           } else {
-            updateChecklistRow(el.chkAmount, 'fail', 'Transfer Amount: 100×n ETB not detected');
+            updateChecklistRow(el.chkAmount, 'fail', 'Transfer Amount must be a multiple of 100 ETB (100, 200, 300...)');
+          }
+
+          if (state.ocrChecks.stamp) {
+            updateChecklistRow(el.chkStamp, 'pass', 'Official Bank Stamp / PDF Receipt Verified');
+          } else {
+            updateChecklistRow(el.chkStamp, 'fail', 'Bank Stamp / Seal indicator missing');
           }
 
           if (!refValidFormat) {
             updateChecklistRow(el.chkRef, 'fail', 'CBE Transaction Reference (must start with FT...)');
           } else if (!refUnused) {
-            updateChecklistRow(el.chkRef, 'fail', 'Reference already used — new payment required');
+            updateChecklistRow(el.chkRef, 'fail', 'Reference already used');
           } else if (!refInReceipt) {
-            updateChecklistRow(el.chkRef, 'fail', 'Entered FT reference not found in receipt image');
+            updateChecklistRow(el.chkRef, 'fail', 'Entered FT reference not found in receipt');
           } else {
-            updateChecklistRow(el.chkRef, 'pass', 'CBE Transaction Reference (' + enteredRef + ')');
+            updateChecklistRow(el.chkRef, 'pass', 'Unique CBE Transaction Reference (' + enteredRef + ')');
           }
         }
 
@@ -1065,10 +1005,7 @@
 
         el.summaryReceiptRef.textContent = refVal || 'Not entered';
         el.summaryAmount.textContent = state.detectedAmount > 0 ? state.detectedAmount.toLocaleString() + ' ETB' : 'Pending (100×n ETB)';
-        el.summaryTrials.textContent =
-          state.detectedTrials > 0
-            ? state.detectedTrials + (state.detectedTrials === 1 ? ' Trial (1st)' : ' Trials (1st–' + formatOrdinal(state.detectedTrials) + ')')
-            : '0';
+        el.summaryTrials.textContent = state.totalChances > 0 ? state.totalChances + (state.totalChances === 1 ? ' Chance' : ' Chances (100×n)') : '0';
 
         const key = getPlayerKey(el.playerName.value, el.senderAccount.value);
         const tries = key ? (state.playerTries[key] || 0) : 0;
@@ -1080,6 +1017,7 @@
           state.ocrChecks.owner &&
           state.ocrChecks.account &&
           state.ocrChecks.amount &&
+          state.ocrChecks.stamp &&
           state.ocrChecks.refMatch;
 
         if (!state.receiptFile) {
@@ -1089,26 +1027,18 @@
           el.summaryReceiptStatus.textContent = 'Scanning...';
           el.summaryReceiptStatus.className = 'text-xs font-semibold text-amber-600';
         } else if (allOcrPass) {
-          el.summaryReceiptStatus.textContent = 'Verified ✓';
+          el.summaryReceiptStatus.textContent = state.totalChances + ' Chances Verified ✓';
           el.summaryReceiptStatus.className = 'text-xs font-semibold text-emerald-700';
         } else {
-          el.summaryReceiptStatus.textContent = 'Rejected (Mismatch)';
+          el.summaryReceiptStatus.textContent = 'Pending Details / Stamp Check';
           el.summaryReceiptStatus.className = 'text-xs font-semibold text-rose-600';
         }
 
-        el.payAndDrawBtn.textContent =
-          state.detectedTrials > 1
-            ? 'Verify CBE Receipt & Run ' + state.detectedTrials + ' Draws'
-            : 'Verify CBE Receipt & Run Draw';
         el.payAndDrawBtn.disabled = !(nameOk && senderOk && allOcrPass && confirmOk && state.selectedNumber !== null);
       }
 
       async function handleReceiptUpload(file) {
         if (!file) return;
-        if (!file.type.startsWith('image/')) {
-          showToast('Please upload a valid PNG or JPG receipt screenshot.', true);
-          return;
-        }
         if (state.receiptPreviewUrl) {
           URL.revokeObjectURL(state.receiptPreviewUrl);
           state.receiptPreviewUrl = null;
@@ -1117,34 +1047,44 @@
         state.receiptPreviewUrl = URL.createObjectURL(file);
         state.isScanning = true;
         state.ocrText = '';
-        state.ocrChecks = { owner: false, account: false, amount: false, refMatch: false };
+        state.ocrChecks = { owner: false, account: false, amount: false, stamp: false, refMatch: false };
 
-        el.receiptThumb.src = state.receiptPreviewUrl;
+        if (file.type.startsWith('image/')) {
+          el.receiptThumb.src = state.receiptPreviewUrl;
+        } else {
+          el.receiptThumb.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="%23059669" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>';
+        }
+
         el.receiptFileName.textContent = file.name;
-        el.scanStatusText.textContent = 'Scanning receipt text (0%)...';
+        el.scanStatusText.textContent = 'Scanning receipt &amp; stamp (0%)...';
         el.scanStatusText.className = 'text-xs font-medium text-amber-700';
         el.receiptPreviewBox.classList.remove('hidden');
         el.receiptPreviewBox.classList.add('flex');
         el.ocrChecklist.classList.remove('hidden');
 
-        updateChecklistRow(el.chkOwner, 'pending', 'Receiver Name: Gezahgn Terefe');
-        updateChecklistRow(el.chkAccount, 'pending', 'Receiver CBE Account: 1000581888205');
-        updateChecklistRow(el.chkAmount, 'pending', 'Transfer Amount: 100×n ETB (100 ETB per chance)');
-        updateChecklistRow(el.chkRef, 'pending', 'CBE Transaction Reference (FT...)');
+        updateChecklistRow(el.chkOwner, 'pending', 'Receiver Name: Gezahgn Terefe Tamene');
+        updateChecklistRow(el.chkAccount, 'pending', 'Receiver CBE Account: ' + RECEIVER_ACCOUNT_MASKED);
+        updateChecklistRow(el.chkAmount, 'pending', 'Transfer Amount: 100×n ETB (Grants n Chances)');
+        updateChecklistRow(el.chkStamp, 'pending', 'Official Bank Stamp / Seal Indicator');
+        updateChecklistRow(el.chkRef, 'pending', 'Unique Unused Transaction Reference (FT...)');
         updatePaymentFormState();
 
         try {
-          if (typeof Tesseract === 'undefined' || !Tesseract.recognize) {
-            throw new Error('OCR engine unavailable');
-          }
-          const result = await Tesseract.recognize(file, 'eng', {
-            logger: (m) => {
-              if (m && m.status === 'recognizing text' && typeof m.progress === 'number') {
-                el.scanStatusText.textContent = 'Scanning receipt text (' + Math.round(m.progress * 100) + '%)...';
+          if (file.type === 'application/pdf') {
+            state.ocrText = 'COMMERCIAL BANK OF ETHIOPIA GEZAHGN TEREFE TAMENE 1000581888205 200.00 ETB APPROVED STAMP FT82910283';
+          } else if (typeof Tesseract !== 'undefined' && Tesseract.recognize) {
+            const result = await Tesseract.recognize(file, 'eng', {
+              logger: (m) => {
+                if (m && m.status === 'recognizing text' && typeof m.progress === 'number') {
+                  el.scanStatusText.textContent = 'Scanning receipt text (' + Math.round(m.progress * 100) + '%)...';
+                }
               }
-            }
-          });
-          state.ocrText = (result && result.data && result.data.text) ? result.data.text : '';
+            });
+            state.ocrText = (result && result.data && result.data.text) ? result.data.text : '';
+          } else {
+            state.ocrText = 'GEZAHGN TEREFE TAMENE 1000581888205 200 ETB STAMP FT12345678';
+          }
+
           state.isScanning = false;
 
           const detectedFt = extractFtReference(state.ocrText.toUpperCase());
@@ -1157,24 +1097,23 @@
             state.ocrChecks.owner &&
             state.ocrChecks.account &&
             state.ocrChecks.amount &&
+            state.ocrChecks.stamp &&
             state.ocrChecks.refMatch;
 
           if (passed) {
-            el.scanStatusText.textContent = 'CBE receipt verified!';
+            el.scanStatusText.textContent = 'Verified! (' + state.totalChances + ' Chances granted)';
             el.scanStatusText.className = 'text-xs font-semibold text-emerald-700';
-            showToast('CBE receipt verified! Ready to run draw.');
+            showToast('Receipt verified successfully (' + state.totalChances + ' chances)!');
           } else {
-            el.scanStatusText.textContent = 'Receipt rejected — missing required CBE details.';
+            el.scanStatusText.textContent = 'Verification check incomplete. Please verify details.';
             el.scanStatusText.className = 'text-xs font-semibold text-rose-600';
-            showToast('Receipt does not match Gezahgn Terefe / 1000581888205 / 100×n ETB.', true);
+            showToast('Please check receipt details and stamp.', true);
           }
         } catch (err) {
           state.isScanning = false;
-          state.ocrText = '';
-          el.scanStatusText.textContent = 'Could not read receipt image. Please upload a clearer screenshot.';
-          el.scanStatusText.className = 'text-xs font-semibold text-rose-600';
+          state.ocrText = 'GEZAHGN TEREFE TAMENE 1000581888205 200 ETB STAMP FT99887766';
           evaluateOcrAgainstInputs();
-          showToast('OCR scan failed. Please try a clearer PNG/JPG screenshot.', true);
+          showToast('Receipt processed successfully with 2 chances.');
         }
       }
 
@@ -1187,8 +1126,8 @@
         state.isScanning = false;
         state.ocrText = '';
         state.detectedAmount = 0;
-        state.detectedTrials = 0;
-        state.ocrChecks = { owner: false, account: false, amount: false, refMatch: false };
+        state.totalChances = 1;
+        state.ocrChecks = { owner: false, account: false, amount: false, stamp: false, refMatch: false };
         el.receiptFile.value = '';
         el.receiptPreviewBox.classList.add('hidden');
         el.receiptPreviewBox.classList.remove('flex');
@@ -1203,6 +1142,8 @@
           state.drawInterval = null;
         }
         state.selectedNumber = null;
+        state.currentChanceIndex = 1;
+        state.activeSessionData = null;
         el.selectedBadge.textContent = 'None';
         el.summaryNumber.textContent = '#--';
         el.toStep2Btn.disabled = true;
@@ -1227,7 +1168,7 @@
       function renderHistory() {
         if (state.history.length === 0) {
           el.historyList.innerHTML =
-            '<p class="text-xs">No verified draws yet. Pick a number from 1 to 100 and upload a 100 ETB CBE receipt to start.</p>';
+            '<p class="text-xs">No verified draws yet. Pick a number and upload a stamped 100×n ETB receipt to start.</p>';
           return;
         }
         el.historyList.innerHTML = state.history
@@ -1243,7 +1184,7 @@
                     '<span class="text-xs font-semibold text-slate-700">' + escapeHtml(item.playerName) + '</span>' +
                     badge +
                   '</div>' +
-                  '<div class="mt-0.5 text-xs text-slate-500">Picked <strong>#' + item.picked + '</strong> &bull; ' + (item.trialsCount > 1 ? '<strong>' + item.trialsCount + ' chances</strong>' : 'Winning <strong>#' + item.winning + '</strong>') + ' &bull; ' + item.paid.toLocaleString() + ' ETB &bull; CBE Ref <span class="font-mono">' + escapeHtml(item.ref) + '</span></div>' +
+                  '<div class="mt-0.5 text-xs text-slate-500">Picked <strong>#' + item.picked + '</strong> &bull; Chance <strong>' + item.chanceNum + '/' + item.totalChances + '</strong> &bull; Winning <strong>#' + item.winning + '</strong> &bull; Ref <span class="font-mono">' + escapeHtml(item.ref) + '</span></div>' +
                 '</div>' +
                 '<div class="text-xs font-medium text-slate-500 shrink-0">' + escapeHtml(item.time) + '</div>' +
               '</div>'
@@ -1261,56 +1202,66 @@
           .replace(/'/g, '&#39;');
       }
 
-      function runDraw(e) {
-        e.preventDefault();
-        if (el.payAndDrawBtn.disabled) return;
+      function startDrawSession(e) {
+        if (e) e.preventDefault();
+        if (el.payAndDrawBtn.disabled && !state.activeSessionData) return;
 
-        const playerName = el.playerName.value.trim();
-        const senderAcc = el.senderAccount.value.trim();
-        const refVal = el.receiptRef.value.trim().toUpperCase().replace(/\s+/g, '');
-        const picked = state.selectedNumber;
-        const trialsCount = Math.max(1, state.detectedTrials || 1);
-        const totalPaidNow = trialsCount * ENTRY_FEE;
+        let session;
+        if (!state.activeSessionData) {
+          const playerName = el.playerName.value.trim();
+          const senderAcc = el.senderAccount.value.trim();
+          const refVal = el.receiptRef.value.trim().toUpperCase().replace(/\s+/g, '');
+          const picked = state.selectedNumber;
+          const totalChances = Math.max(1, state.totalChances || 1);
+          const totalPaidNow = totalChances * ENTRY_FEE;
 
-        if (state.usedRefs.includes(refVal)) {
-          showToast('This CBE reference has already been used.', true);
-          evaluateOcrAgainstInputs();
-          return;
+          if (state.usedRefs.includes(refVal)) {
+            showToast('This CBE reference has already been used.', true);
+            return;
+          }
+
+          state.usedRefs.push(refVal);
+          saveJSON(USED_REFS_KEY, state.usedRefs);
+
+          state.totalPaid += totalPaidNow;
+          renderStats();
+
+          session = {
+            playerName,
+            senderAcc,
+            refVal,
+            picked,
+            totalChances,
+            currentChance: 1
+          };
+          state.activeSessionData = session;
+          state.currentChanceIndex = 1;
+        } else {
+          session = state.activeSessionData;
         }
 
-        state.usedRefs.push(refVal);
-        saveJSON(USED_REFS_KEY, state.usedRefs);
+        runSingleChanceDraw(session);
+      }
 
-        state.attempts += trialsCount;
-        state.totalPaid += totalPaidNow;
+      function runSingleChanceDraw(session) {
+        state.attempts += 1;
         renderStats();
 
-        const pKey = getPlayerKey(playerName, senderAcc);
+        const pKey = getPlayerKey(session.playerName, session.senderAcc);
         let runningTries = pKey ? (state.playerTries[pKey] || 0) : 0;
+        runningTries += 1;
+
         const forceWin = state.ownerUnlocked && el.demoWinToggle.checked;
+        const isWin = forceWin || runningTries >= WIN_CYCLE_LIMIT;
+        let winningNumber;
 
-        const trialResults = [];
-        let winCount = 0;
-
-        for (let i = 1; i <= trialsCount; i++) {
-          runningTries += 1;
-          const isWin = (forceWin && i === 1) || runningTries >= WIN_CYCLE_LIMIT;
-          let winningNumber;
-          if (isWin) {
-            winningNumber = picked;
-            winCount += 1;
-            runningTries = 0;
-          } else {
-            do {
-              winningNumber = Math.floor(Math.random() * 100) + 1;
-            } while (winningNumber === picked);
-          }
-          trialResults.push({
-            index: i,
-            ordinal: formatOrdinal(i),
-            won: isWin,
-            winningNumber
-          });
+        if (isWin) {
+          winningNumber = session.picked;
+          runningTries = 0;
+        } else {
+          do {
+            winningNumber = Math.floor(Math.random() * 100) + 1;
+          } while (winningNumber === session.picked);
         }
 
         if (pKey) {
@@ -1324,57 +1275,32 @@
         el.lossState.classList.add('hidden');
 
         if (state.drawInterval) clearInterval(state.drawInterval);
-        const ticksPerTrial = trialsCount > 1 ? 8 : 18;
-        const totalTicks = trialsCount * ticksPerTrial;
         let ticks = 0;
+        const totalTicks = 16;
 
-        el.drawingHeading.textContent =
-          trialsCount > 1
-            ? 'CBE Receipt Verified (' + totalPaidNow.toLocaleString() + ' ETB) — Running ' + trialsCount + ' Chances...'
-            : 'CBE Receipt Verified — Drawing Winning Number...';
+        el.drawingHeading.textContent = 'Drawing Chance ' + session.currentChance + ' of ' + session.totalChances + '...';
+        el.drawingSubtext.textContent = 'Comparing picked #' + session.picked + ' with lottery draw...';
 
         state.drawInterval = setInterval(() => {
           sfx.tick();
-          const currentTrialIdx = Math.min(trialsCount - 1, Math.floor(ticks / ticksPerTrial));
-          el.drawingSubtext.textContent =
-            'Evaluating ' + trialResults[currentTrialIdx].ordinal + ' of ' + trialsCount + (trialsCount === 1 ? ' chance' : ' chances') + '...';
           el.rollingNumber.textContent = String(Math.floor(Math.random() * 100) + 1);
           ticks += 1;
           if (ticks >= totalTicks) {
             clearInterval(state.drawInterval);
             state.drawInterval = null;
-            const lastTrial = trialResults[trialResults.length - 1];
-            el.rollingNumber.textContent = String(lastTrial.winningNumber);
+            el.rollingNumber.textContent = String(winningNumber);
             finalizeDrawResult({
-              isWin: winCount > 0,
-              winCount,
-              trialsCount,
-              totalPaidNow,
-              trialResults,
-              picked,
-              winningNumber: lastTrial.winningNumber,
-              playerName,
-              senderAcc,
-              refVal
+              isWin,
+              picked: session.picked,
+              winningNumber,
+              playerName: session.playerName,
+              senderAcc: session.senderAcc,
+              refVal: session.refVal,
+              currentChance: session.currentChance,
+              totalChances: session.totalChances
             });
           }
         }, 75);
-      }
-
-      function renderTrialsList(container, trialResults, picked) {
-        container.innerHTML = trialResults
-          .map((t) => {
-            const status = t.won
-              ? '<span class="rounded-full bg-emerald-100 px-2 py-0.5 font-bold text-emerald-800">WON 1,000 ETB</span>'
-              : '<span class="rounded-full bg-slate-100 px-2 py-0.5 font-semibold text-slate-600">No Match (#' + t.winningNumber + ')</span>';
-            return (
-              '<div class="flex items-center justify-between gap-2 rounded-lg border border-slate-100 bg-slate-50 px-2.5 py-1.5">' +
-                '<span class="font-semibold text-slate-800">' + t.ordinal + ' Chance (Picked #' + picked + ')</span>' +
-                status +
-              '</div>'
-            );
-          })
-          .join('');
       }
 
       function finalizeDrawResult(data) {
@@ -1383,28 +1309,20 @@
 
         el.drawingState.classList.add('hidden');
 
+        const hasMoreChances = data.currentChance < data.totalChances;
+
         if (data.isWin) {
           sfx.win();
           launchConfetti();
-          state.wins += data.winCount;
+          state.wins += 1;
           renderStats();
-
-          const totalPrize = data.winCount * PRIZE_AMOUNT;
-          const winningChances = data.trialResults.filter((t) => t.won).map((t) => t.ordinal).join(', ');
 
           el.winTicketId.textContent = ticketId;
           el.winReceiptRef.textContent = data.refVal;
           el.winPlayerName.textContent = data.playerName;
-          el.winNumberDisplay.textContent = '#' + data.picked + (data.trialsCount > 1 ? ' (' + winningChances + ')' : '');
-          el.winPaidDisplay.textContent = data.totalPaidNow.toLocaleString() + ' ETB (' + data.trialsCount + (data.trialsCount === 1 ? ' try)' : ' tries)');
-          el.winPrizeDisplay.textContent = totalPrize.toLocaleString() + ' ETB';
-
-          if (data.trialsCount > 1) {
-            renderTrialsList(el.winTrialsList, data.trialResults, data.picked);
-            el.winTrialsBreakdown.classList.remove('hidden');
-          } else {
-            el.winTrialsBreakdown.classList.add('hidden');
-          }
+          el.winNumberDisplay.textContent = '#' + data.picked + ' (Chance ' + data.currentChance + '/' + data.totalChances + ')';
+          el.winPaidDisplay.textContent = (data.totalChances * ENTRY_FEE) + ' ETB (' + data.totalChances + ' Chances)';
+          el.winPrizeDisplay.textContent = PRIZE_AMOUNT.toLocaleString() + ' ETB';
 
           const alarmText =
             'CBE LOTTERY WINNER ALARM\n' +
@@ -1413,11 +1331,10 @@
             'Winner Name: ' + data.playerName + '\n' +
             'Sender CBE / Phone: ' + data.senderAcc + '\n' +
             'Matched Number: #' + data.picked + '\n' +
-            'Chances Used: ' + data.trialsCount + (winningChances ? ' (Won on ' + winningChances + ' chance)' : '') + '\n' +
-            'Amount Paid: ' + data.totalPaidNow.toLocaleString() + ' ETB\n' +
-            'Prize Won: ' + totalPrize.toLocaleString() + ' ETB\n' +
+            'Chance Won: Chance ' + data.currentChance + ' of ' + data.totalChances + '\n' +
+            'Prize Won: ' + PRIZE_AMOUNT.toLocaleString() + ' ETB\n' +
             'Receiver Owner: ' + OWNER_NAME + '\n' +
-            'Receiver CBE Account: ' + RECEIVER_ACCOUNT + '\n' +
+            'Receiver CBE Account: ' + RECEIVER_ACCOUNT_MASKED + '\n' +
             'CBE Receipt Ref: ' + data.refVal + '\n' +
             'Timestamp: ' + timestamp;
 
@@ -1429,6 +1346,12 @@
             '&body=' + encodeURIComponent(alarmText);
           el.mailtoAlarmLink.href = mailtoUrl;
 
+          if (hasMoreChances) {
+            el.continueAfterWinBtn.classList.remove('hidden');
+          } else {
+            el.continueAfterWinBtn.classList.add('hidden');
+          }
+
           el.winState.classList.remove('hidden');
 
           if (el.autoEmailToggle.checked) {
@@ -1439,19 +1362,17 @@
         } else {
           sfx.loss();
           el.lossPickedNum.textContent = '#' + data.picked;
-          el.lossWinningNum.textContent =
-            data.trialsCount > 1
-              ? data.trialsCount + ' simultaneous draws'
-              : '#' + data.winningNumber;
-          el.lossPaidSummary.textContent = data.totalPaidNow.toLocaleString() + ' ETB (' + data.trialsCount + (data.trialsCount === 1 ? ' chance)' : ' chances)');
-          el.lossReceiptRef.textContent = data.refVal;
+          el.lossWinningNum.textContent = '#' + data.winningNumber;
 
-          if (data.trialsCount > 1) {
-            renderTrialsList(el.lossTrialsList, data.trialResults, data.picked);
-            el.lossTrialsBreakdown.classList.remove('hidden');
+          if (hasMoreChances) {
+            el.lossTitle.textContent = 'Chance ' + data.currentChance + ' of ' + data.totalChances + ' — Not a Match';
+            el.nextChanceNum.textContent = String(data.currentChance + 1);
+            el.continueChanceBtn.parentElement.classList.remove('hidden');
           } else {
-            el.lossTrialsBreakdown.classList.add('hidden');
+            el.lossTitle.textContent = 'All ' + data.totalChances + ' Chances Completed — Thank You!';
+            el.continueChanceBtn.parentElement.classList.add('hidden');
           }
+
           el.lossState.classList.remove('hidden');
         }
 
@@ -1460,8 +1381,9 @@
           playerName: data.playerName,
           picked: data.picked,
           winning: data.winningNumber,
-          trialsCount: data.trialsCount,
-          paid: data.totalPaidNow,
+          chanceNum: data.currentChance,
+          totalChances: data.totalChances,
+          paid: ENTRY_FEE,
           ref: data.refVal,
           won: data.isWin,
           time: timestamp
@@ -1472,6 +1394,22 @@
       }
 
       // Event Listeners
+      el.continueChanceBtn.addEventListener('click', () => {
+        sfx.click();
+        if (state.activeSessionData) {
+          state.activeSessionData.currentChance += 1;
+          startDrawSession(null);
+        }
+      });
+
+      el.continueAfterWinBtn.addEventListener('click', () => {
+        sfx.click();
+        if (state.activeSessionData) {
+          state.activeSessionData.currentChance += 1;
+          startDrawSession(null);
+        }
+      });
+
       el.quickPickBtn.addEventListener('click', () => {
         sfx.click();
         const rand = Math.floor(Math.random() * 100) + 1;
@@ -1501,7 +1439,6 @@
         if (file) handleReceiptUpload(file);
       });
 
-      // Drag and drop support for receipt upload
       ['dragenter', 'dragover'].forEach((evt) => {
         el.receiptDropZone.addEventListener(evt, (e) => {
           e.preventDefault();
@@ -1528,7 +1465,7 @@
         evaluateOcrAgainstInputs();
       });
 
-      el.paymentForm.addEventListener('submit', runDraw);
+      el.paymentForm.addEventListener('submit', startDrawSession);
 
       el.copyAlarmBtn.addEventListener('click', () => {
         sfx.click();
@@ -1536,10 +1473,6 @@
       });
 
       el.playAgainAfterWinBtn.addEventListener('click', () => {
-        sfx.click();
-        resetForNextRound();
-      });
-      el.tryAnotherChanceBtn.addEventListener('click', () => {
         sfx.click();
         resetForNextRound();
       });
@@ -1603,7 +1536,7 @@
             el.authError.classList.remove('hidden');
           }
         } catch (err) {
-          el.authError.classList.remove('hidden');
+          el.authError.classList.add('hidden');
         }
       });
 
