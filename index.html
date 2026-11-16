@@ -162,10 +162,10 @@
             </div>
           </div>
           <ol class="list-decimal list-inside space-y-1 text-emerald-100">
-            <li><strong>Pick number</strong> for your current chance.</li>
+            <li><strong>Pick 1 number</strong> from 1 to 100 (Step 1).</li>
             <li><strong>Pay 100×n ETB</strong> to <strong>1000581888205</strong>.</li>
-            <li><strong>Upload receipt</strong> (Scanner checks account &amp; FT).</li>
-            <li><strong>Consecutive Play:</strong> Pick &amp; draw chance by chance up to n times!</li>
+            <li><strong>Upload receipt</strong> (Scanner checks account <strong class="font-mono">1****8205</strong> &amp; FT reference).</li>
+            <li><strong>Play Chances:</strong> Continue chance by chance up to n times!</li>
           </ol>
         </div>
 
@@ -204,7 +204,7 @@
         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-200 text-xs font-bold text-slate-600">3</span>
         <div class="min-w-0">
           <div class="truncate text-xs font-semibold text-slate-700 sm:text-sm">Multi-Chance Draw</div>
-          <div class="hidden text-xs text-slate-500 sm:block">Consecutive Draw &amp; Alarm</div>
+          <div class="hidden text-xs text-slate-500 sm:block">Continue &amp; Win</div>
         </div>
       </div>
     </nav>
@@ -215,8 +215,8 @@
       <section id="step1Section" class="fade-slide-in">
         <div class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h2 id="step1Heading" class="text-lg font-bold text-slate-900">Step 1: Choose Your Lucky Number (1–100)</h2>
-            <p id="step1Subtext" class="text-sm text-slate-600">
+            <h2 class="text-lg font-bold text-slate-900">Step 1: Choose Your Lucky Number (1–100)</h2>
+            <p class="text-sm text-slate-600">
               Select any number from 1 to 100. Step 2 verifies your receipt for account <strong class="font-mono">1000581888205</strong> (scanning for <strong class="font-mono">1****8205</strong>).
             </p>
           </div>
@@ -341,7 +341,7 @@
               <label class="flex cursor-pointer items-start gap-2.5">
                 <input id="autoEmailToggle" type="checkbox" checked class="mt-0.5 h-4 w-4 rounded border-slate-400 text-emerald-600 focus:ring-emerald-600" />
                 <span class="text-xs text-slate-700">
-                  <strong>Auto-Open Email Alarm:</strong> Automatically send trial &amp; receipt details to <strong>gezehegn43@gmail.com</strong> upon every draw.
+                  <strong>Auto-Open Email Alarm:</strong> Automatically send win &amp; receipt details to <strong>gezehegn43@gmail.com</strong> upon winning.
                 </span>
               </label>
             </div>
@@ -447,12 +447,12 @@
           <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
             <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <h3 class="text-sm font-bold text-slate-900">📧 Owner Trial &amp; Win Alarm &rarr; gezehegn43@gmail.com</h3>
-                <p class="mt-0.5 text-xs text-slate-600">Owner Gezahgn Terefe Tamene receives trial &amp; receipt details for every draw.</p>
+                <h3 class="text-sm font-bold text-slate-900">📧 Winner &amp; Receipt Alarm &rarr; gezehegn43@gmail.com</h3>
+                <p class="mt-0.5 text-xs text-slate-600">Send the verified receipt details and winner name to Gezahgn Terefe Tamene for payout.</p>
               </div>
               <div class="flex flex-wrap gap-2">
                 <a id="mailtoAlarmLink" href="mailto:gezehegn43@gmail.com" class="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-emerald-700">
-                  <span>✉️</span> Send Owner Alarm
+                  <span>✉️</span> Send Email Alarm
                 </a>
                 <button id="copyAlarmBtn" type="button" class="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-100">
                   <span>📋</span> Copy Alarm Text
@@ -464,7 +464,7 @@
 
           <div class="flex justify-end gap-3">
             <button id="continueAfterWinBtn" type="button" class="hidden rounded-xl bg-emerald-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-emerald-700">
-              Pick Next Chance Number (&rarr;)
+              Continue to Next Chance (&rarr;)
             </button>
             <button id="playAgainAfterWinBtn" type="button" class="rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800">
               New Receipt Round
@@ -480,29 +480,9 @@
             <p id="lossSubtext" class="mx-auto mt-2 max-w-lg text-sm text-rose-800">
               Your chosen number <strong id="lossPickedNum">#--</strong> did not match (<strong id="lossWinningNum">#--</strong>). You have remaining chances from your paid receipt!
             </p>
-
-            <!-- Owner Trial Alarm Box for Losses -->
-            <div class="mt-4 text-left rounded-xl border border-slate-200 bg-white p-4 sm:p-5">
-              <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <h3 class="text-sm font-bold text-slate-900">📧 Owner Trial Alarm Sent &rarr; gezehegn43@gmail.com</h3>
-                  <p class="mt-0.5 text-xs text-slate-600">Gezahgn Terefe Tamene receives trial records after every attempt.</p>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                  <a id="mailtoLossAlarmLink" href="mailto:gezehegn43@gmail.com" class="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-emerald-700">
-                    <span>✉️</span> Send Alarm Email
-                  </a>
-                  <button id="copyLossAlarmBtn" type="button" class="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-100">
-                    <span>📋</span> Copy Alarm Text
-                  </button>
-                </div>
-              </div>
-              <pre id="lossAlarmPreview" class="mt-3 overflow-x-auto whitespace-pre-wrap rounded-lg border border-slate-200 bg-slate-50 p-3 text-xs text-slate-700"></pre>
-            </div>
-
             <div class="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
               <button id="continueChanceBtn" type="button" class="btn-shimmer inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-emerald-700">
-                <span>▶️</span> Pick Chance <span id="nextChanceNum">2</span> Number &amp; Draw
+                <span>▶️</span> Continue to Next Chance (Chance <span id="nextChanceNum">2</span>)
               </button>
               <button id="playAgainAfterLossBtn" type="button" class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800">
                 New Receipt Round
@@ -540,10 +520,10 @@
       const RECEIVER_ACCOUNT_LAST4 = '8205';
       const ENTRY_FEE = 100;
       const PRIZE_AMOUNT = 1000;
-      const USED_REFS_KEY = 'lottery_used_cbe_refs_v8';
-      const PLAYER_TRIES_KEY = 'lottery_player_tries_v7';
-      const STATS_STORAGE_KEY = 'lottery_stats_v7';
-      const HISTORY_STORAGE_KEY = 'lottery_history_v7';
+      const USED_REFS_KEY = 'lottery_used_cbe_refs_v7';
+      const PLAYER_TRIES_KEY = 'lottery_player_tries_v6';
+      const STATS_STORAGE_KEY = 'lottery_stats_v6';
+      const HISTORY_STORAGE_KEY = 'lottery_history_v6';
       const WIN_CYCLE_LIMIT = 80;
 
       function loadJSON(key, fallback) {
@@ -616,8 +596,6 @@
         stepTab2: document.getElementById('stepTab2'),
         stepTab3: document.getElementById('stepTab3'),
         step1Section: document.getElementById('step1Section'),
-        step1Heading: document.getElementById('step1Heading'),
-        step1Subtext: document.getElementById('step1Subtext'),
         step2Section: document.getElementById('step2Section'),
         step3Section: document.getElementById('step3Section'),
         numberGrid: document.getElementById('numberGrid'),
@@ -674,9 +652,6 @@
         lossSubtext: document.getElementById('lossSubtext'),
         lossPickedNum: document.getElementById('lossPickedNum'),
         lossWinningNum: document.getElementById('lossWinningNum'),
-        mailtoLossAlarmLink: document.getElementById('mailtoLossAlarmLink'),
-        copyLossAlarmBtn: document.getElementById('copyLossAlarmBtn'),
-        lossAlarmPreview: document.getElementById('lossAlarmPreview'),
         continueChanceBtn: document.getElementById('continueChanceBtn'),
         playAgainAfterLossBtn: document.getElementById('playAgainAfterLossBtn'),
         nextChanceNum: document.getElementById('nextChanceNum'),
@@ -1270,7 +1245,6 @@
           state.currentChanceIndex = 1;
         } else {
           session = state.activeSessionData;
-          session.picked = state.selectedNumber; // updated for consecutive chance
         }
 
         runSingleChanceDraw(session);
@@ -1344,28 +1318,6 @@
 
         const hasMoreChances = data.currentChance < data.totalChances;
 
-        // Build Owner Alarm Text for EVERY trial (Win or Loss)
-        const alarmText =
-          'CBE LOTTERY TRIAL ALARM (GEZAHGN TEREFE TAMENE)\n' +
-          '==============================================\n' +
-          'Ticket ID: ' + ticketId + '\n' +
-          'Player Name: ' + data.playerName + '\n' +
-          'Sender CBE / Phone: ' + data.senderAcc + '\n' +
-          'Chosen Number: #' + data.picked + '\n' +
-          'Drawn Number: #' + data.winningNumber + '\n' +
-          'Chance: Chance ' + data.currentChance + ' of ' + data.totalChances + '\n' +
-          'Trial Result: ' + (data.isWin ? 'WON 1,000 ETB! 🎉' : 'No Match (Try Again)') + '\n' +
-          'Receiver Name: ' + OWNER_NAME + '\n' +
-          'Receiver CBE Account: ' + RECEIVER_ACCOUNT_FULL + '\n' +
-          'CBE Receipt Ref: ' + data.refVal + '\n' +
-          'Timestamp: ' + timestamp;
-
-        const subject = 'Lottery Trial Alarm (' + ticketId + ') - ' + data.playerName + ' - ' + data.refVal;
-        const mailtoUrl =
-          'mailto:' + ADMIN_EMAIL +
-          '?subject=' + encodeURIComponent(subject) +
-          '&body=' + encodeURIComponent(alarmText);
-
         if (data.isWin) {
           sfx.win();
           launchConfetti();
@@ -1379,7 +1331,26 @@
           el.winPaidDisplay.textContent = (data.totalChances * ENTRY_FEE) + ' ETB (' + data.totalChances + (data.totalChances === 1 ? ' Chance)' : ' Chances)');
           el.winPrizeDisplay.textContent = PRIZE_AMOUNT.toLocaleString() + ' ETB';
 
+          const alarmText =
+            'CBE LOTTERY WINNER ALARM\n' +
+            '========================\n' +
+            'Ticket ID: ' + ticketId + '\n' +
+            'Winner Name: ' + data.playerName + '\n' +
+            'Sender CBE / Phone: ' + data.senderAcc + '\n' +
+            'Matched Number: #' + data.picked + '\n' +
+            'Chance Won: Chance ' + data.currentChance + ' of ' + data.totalChances + '\n' +
+            'Prize Won: ' + PRIZE_AMOUNT.toLocaleString() + ' ETB\n' +
+            'Receiver Name: ' + OWNER_NAME + '\n' +
+            'Receiver CBE Account: ' + RECEIVER_ACCOUNT_FULL + '\n' +
+            'CBE Receipt Ref: ' + data.refVal + '\n' +
+            'Timestamp: ' + timestamp;
+
           el.alarmPreview.textContent = alarmText;
+          const subject = 'Lottery Win Alert (' + ticketId + ') - ' + data.playerName + ' - ' + data.refVal;
+          const mailtoUrl =
+            'mailto:' + ADMIN_EMAIL +
+            '?subject=' + encodeURIComponent(subject) +
+            '&body=' + encodeURIComponent(alarmText);
           el.mailtoAlarmLink.href = mailtoUrl;
 
           if (hasMoreChances) {
@@ -1400,27 +1371,18 @@
           el.lossPickedNum.textContent = '#' + data.picked;
           el.lossWinningNum.textContent = '#' + data.winningNumber;
 
-          el.lossAlarmPreview.textContent = alarmText;
-          el.mailtoLossAlarmLink.href = mailtoUrl;
-
           if (hasMoreChances) {
             el.lossTitle.textContent = 'Chance ' + data.currentChance + ' of ' + data.totalChances + ' — Not a Match This Time';
-            el.lossSubtext.innerHTML = 'Your chosen number <strong>#' + data.picked + '</strong> did not match (<strong>#' + data.winningNumber + '</strong>). Pick your next chance number consecutively below!';
+            el.lossSubtext.innerHTML = 'Your chosen number <strong>#' + data.picked + '</strong> did not match (<strong>#' + data.winningNumber + '</strong>). You still have remaining chances from your paid receipt!';
             el.nextChanceNum.textContent = String(data.currentChance + 1);
             el.continueChanceBtn.classList.remove('hidden');
           } else {
             el.lossTitle.textContent = 'All ' + data.totalChances + (data.totalChances === 1 ? ' Chance Completed' : ' Chances Completed') + ' — Thank You!';
-            el.lossSubtext.innerHTML = 'Your chosen number <strong>#' + data.picked + '</strong> did not match (<strong>#' + data.winningNumber + '</strong>). All chances from this receipt have been played.';
+            el.lossSubtext.innerHTML = 'Your chosen number <strong>#' + data.picked + '</strong> did not match (<strong>#' + data.winningNumber + '</strong>). Upload a new receipt to play again.';
             el.continueChanceBtn.classList.add('hidden');
           }
 
           el.lossState.classList.remove('hidden');
-
-          if (el.autoEmailToggle.checked) {
-            setTimeout(() => {
-              window.location.href = mailtoUrl;
-            }, 400);
-          }
         }
 
         state.history.unshift({
@@ -1440,23 +1402,12 @@
         renderHistory();
       }
 
-      function prepareNextConsecutiveChance() {
-        if (!state.activeSessionData) return;
-        const nextIdx = state.activeSessionData.currentChance + 1;
-        state.selectedNumber = null;
-        el.selectedBadge.textContent = 'None';
-        buildNumberGrid();
-        el.step1Heading.textContent = 'Pick Chance ' + nextIdx + ' of ' + state.activeSessionData.totalChances + ' Lucky Number (1–100)';
-        el.step1Subtext.textContent = 'Select your next consecutive number for Chance ' + nextIdx + ' using your paid receipt.';
-        setStep(1);
-      }
-
       // Event Listeners
       el.continueChanceBtn.addEventListener('click', () => {
         sfx.click();
         if (state.activeSessionData) {
           state.activeSessionData.currentChance += 1;
-          prepareNextConsecutiveChance();
+          startDrawSession(null);
         }
       });
 
@@ -1464,7 +1415,7 @@
         sfx.click();
         if (state.activeSessionData) {
           state.activeSessionData.currentChance += 1;
-          prepareNextConsecutiveChance();
+          startDrawSession(null);
         }
       });
 
@@ -1478,13 +1429,8 @@
       el.toStep2Btn.addEventListener('click', () => {
         if (state.selectedNumber === null) return;
         sfx.click();
-        if (state.activeSessionData) {
-          // If already in an active session, skip step 2 and proceed directly to drawing the next consecutive chance!
-          startDrawSession(null);
-        } else {
-          setStep(2);
-          updatePaymentFormState();
-        }
+        setStep(2);
+        updatePaymentFormState();
       });
 
       el.backToStep1Btn.addEventListener('click', () => {
@@ -1532,12 +1478,7 @@
 
       el.copyAlarmBtn.addEventListener('click', () => {
         sfx.click();
-        copyText(el.alarmPreview.textContent, 'Owner alarm text copied!');
-      });
-
-      el.copyLossAlarmBtn.addEventListener('click', () => {
-        sfx.click();
-        copyText(el.lossAlarmPreview.textContent, 'Owner trial alarm text copied!');
+        copyText(el.alarmPreview.textContent, 'Winner alarm text copied!');
       });
 
       el.playAgainAfterWinBtn.addEventListener('click', () => {
