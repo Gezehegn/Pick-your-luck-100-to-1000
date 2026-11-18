@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Online Lottery — 1 to 100 (100×n ETB CBE &amp; Telebirr Payment to Gezahgn Terefe Tamene)</title>
+  <title>Online Lottery — 1 to 100 (100×n ETB CBE Payment to Gezahgn Terefe Tamene)</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
@@ -143,11 +143,11 @@
           </div>
           <div>
             <span class="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold tracking-wide uppercase backdrop-blur-sm">
-              <span>🎟️</span> Multi-Chance CBE &amp; Telebirr Lottery
+              <span>🎟️</span> Multi-Chance CBE Lottery
             </span>
             <h1 class="mt-1.5 text-xl font-extrabold tracking-tight sm:text-2xl">Pick 1–100 &amp; Win 1,000 ETB</h1>
             <p class="mt-0.5 text-xs text-emerald-50">
-              Pay <strong>100 × n ETB</strong> to <strong>Gezahgn Terefe Tamene</strong> (CBE: <span class="font-mono font-bold">1000581888205</span> | Telebirr: <span class="font-mono font-bold">0916390753</span>) &bull; Alarm: <span class="underline decoration-emerald-200">gezehegn43@gmail.com</span>
+              Pay <strong>100 × n ETB</strong> to <strong>Gezahgn Terefe Tamene</strong> (CBE <span class="font-mono font-bold">1000581888205</span>) &bull; Alarm: <span class="underline decoration-emerald-200">gezehegn43@gmail.com</span>
             </p>
           </div>
         </div>
@@ -163,8 +163,8 @@
           </div>
           <ol class="list-decimal list-inside space-y-1 text-emerald-100">
             <li><strong>Pick number</strong> for your current chance.</li>
-            <li><strong>Pay 100×n ETB</strong> via CBE or Telebirr app.</li>
-            <li><strong>Enter Reference</strong> or upload optional receipt.</li>
+            <li><strong>Pay 100×n ETB</strong> to <strong>1000581888205</strong>.</li>
+            <li><strong>Upload receipt</strong> (Scanner checks account &amp; FT).</li>
             <li><strong>Consecutive Play:</strong> Pick &amp; draw chance by chance up to n times!</li>
           </ol>
         </div>
@@ -196,8 +196,8 @@
       <div id="stepTab2" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white p-3 opacity-70 transition-all">
         <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-200 text-xs font-bold text-slate-600">2</span>
         <div class="min-w-0">
-          <div class="truncate text-xs font-semibold text-slate-700 sm:text-sm">Online Payment &amp; Ref</div>
-          <div class="hidden text-xs text-slate-500 sm:block">CBE / Telebirr Direct Entry</div>
+          <div class="truncate text-xs font-semibold text-slate-700 sm:text-sm">Scan Receipt (1****8205)</div>
+          <div class="hidden text-xs text-slate-500 sm:block">Account &amp; FT Reference Check</div>
         </div>
       </div>
       <div id="stepTab3" class="flex items-center gap-2 rounded-xl border border-slate-200 bg-white p-3 opacity-70 transition-all">
@@ -217,7 +217,7 @@
           <div>
             <h2 id="step1Heading" class="text-lg font-bold text-slate-900">Step 1: Choose Your Lucky Number (1–100)</h2>
             <p id="step1Subtext" class="text-sm text-slate-600">
-              Select any number from 1 to 100. Step 2 allows you to pay via CBE (<strong class="font-mono">1000581888205</strong>) or Telebirr (<strong class="font-mono">0916390753</strong>).
+              Select any number from 1 to 100. Step 2 verifies your receipt for account <strong class="font-mono">1000581888205</strong> (scanning for <strong class="font-mono">1****8205</strong>).
             </p>
           </div>
           <div class="flex flex-wrap items-center gap-2">
@@ -236,17 +236,17 @@
         <div class="mt-6 flex flex-col items-stretch justify-between gap-3 border-t border-slate-100 pt-4 sm:flex-row sm:items-center">
           <p class="text-xs text-slate-500">Multi-Chance Policy: 100 ETB = 1 chance, 200 ETB = 2 chances, 100×n ETB = n chances.</p>
           <button id="toStep2Btn" type="button" disabled class="btn-shimmer inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-slate-300">
-            Continue to Payment &amp; Draw &rarr;
+            Continue to Receipt Scan &amp; Draw &rarr;
           </button>
         </div>
       </section>
 
-      <!-- STEP 2: Payment Method & Direct Entry -->
+      <!-- STEP 2: CBE Payment & Receipt Scan Rule -->
       <section id="step2Section" class="hidden fade-slide-in">
         <div class="mb-5 flex items-center justify-between">
           <div>
-            <h2 class="text-lg font-bold text-slate-900">Step 2: Pay Online &amp; Enter Transaction Reference</h2>
-            <p class="text-sm text-slate-600">Send <strong>100×n ETB</strong> via your banking or Telebirr app, then enter your details below.</p>
+            <h2 class="text-lg font-bold text-slate-900">Step 2: Send 100×n ETB &amp; Scan Receipt (1****8205 &amp; FT Reference)</h2>
+            <p class="text-sm text-slate-600">The scanner checks your uploaded receipt exclusively for account ending/matching <strong>1****8205</strong>, transfer amount (100×n ETB), and unique FT reference.</p>
           </div>
           <button id="backToStep1Btn" type="button" class="rounded-lg border border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-slate-50">
             &larr; Change Number
@@ -255,50 +255,18 @@
 
         <div class="grid gap-6 md:grid-cols-5">
           <form id="paymentForm" class="space-y-4 md:col-span-3" novalidate>
-            
-            <!-- Payment Method Selector -->
-            <div>
-              <label class="block text-sm font-semibold text-slate-700 mb-1.5">Select Payment Alternative <span class="text-rose-600">*</span></label>
-              <div class="grid grid-cols-2 gap-3">
-                <label id="cbeOptionCard" class="flex cursor-pointer items-center gap-3 rounded-xl border-2 border-emerald-600 bg-emerald-50/50 p-3.5 transition-all">
-                  <input type="radio" name="paymentMethod" value="CBE" checked class="h-4 w-4 text-emerald-600 focus:ring-emerald-600" />
-                  <div>
-                    <div class="text-xs font-bold text-slate-900">Commercial Bank (CBE)</div>
-                    <div class="text-[11px] text-slate-600 font-mono">1000581888205</div>
-                  </div>
-                </label>
-                <label id="telebirrOptionCard" class="flex cursor-pointer items-center gap-3 rounded-xl border-2 border-slate-200 bg-white p-3.5 transition-all">
-                  <input type="radio" name="paymentMethod" value="Telebirr" class="h-4 w-4 text-emerald-600 focus:ring-emerald-600" />
-                  <div>
-                    <div class="text-xs font-bold text-slate-900">Telebirr Account</div>
-                    <div class="text-[11px] text-slate-600 font-mono">0916390753</div>
-                  </div>
-                </label>
-              </div>
-            </div>
-
-            <!-- Receiver Account Box (Dynamic) -->
+            <!-- Receiver Account Box (Full Account for Sender to Copy) -->
             <div class="rounded-xl border border-emerald-200 bg-emerald-50/70 p-3.5">
               <div class="flex items-center justify-between gap-3">
                 <div>
-                  <div id="receiverTitleLabel" class="text-xs font-semibold text-emerald-800">Receiver CBE Account (Copy to Send)</div>
+                  <div class="text-xs font-semibold text-emerald-800">Receiver CBE Account (Copy to Send)</div>
                   <div class="text-sm font-bold text-emerald-950">Gezahgn Terefe Tamene</div>
-                  <div id="receiverAccountDisplay" class="font-mono text-lg font-extrabold tracking-wide text-emerald-950">1000581888205</div>
+                  <div class="font-mono text-lg font-extrabold tracking-wide text-emerald-950">1000581888205</div>
                 </div>
                 <button id="copyAccountBtn" type="button" class="inline-flex items-center gap-1.5 rounded-lg border border-emerald-300 bg-white px-3 py-1.5 text-xs font-semibold text-emerald-800 transition hover:bg-emerald-50 active:scale-95">
                   <span>📋</span> Copy Account
                 </button>
               </div>
-            </div>
-
-            <!-- Quick SMS / USSD Payment Mode Toggle -->
-            <div class="rounded-xl border border-blue-200 bg-blue-50/70 p-3.5 space-y-2">
-              <label class="flex cursor-pointer items-start gap-2.5">
-                <input id="directRefModeToggle" type="checkbox" checked class="mt-0.5 h-4 w-4 rounded border-blue-400 text-blue-600 focus:ring-blue-600" />
-                <span class="text-xs text-blue-900">
-                  <strong>Quick Online / USSD Mode (No Receipt Upload Needed):</strong> Check this to pay directly in your banking/Telebirr app and enter your reference code immediately.
-                </span>
-              </label>
             </div>
 
             <!-- Player Full Name -->
@@ -307,38 +275,47 @@
               <input id="playerName" type="text" required placeholder="e.g. Abebe Kebede" class="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm text-slate-900 focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-600/20" />
             </div>
 
-            <!-- Sender Account / Phone -->
+            <!-- Sender CBE Account / Phone -->
             <div>
-              <label for="senderAccount" class="block text-sm font-semibold text-slate-700">Your Sender Account or Phone <span class="text-rose-600">*</span></label>
+              <label for="senderAccount" class="block text-sm font-semibold text-slate-700">Your Sender CBE Account or Phone <span class="text-rose-600">*</span></label>
               <input id="senderAccount" type="text" required placeholder="e.g. 1000123456789 or 0911223344" class="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 font-mono text-sm text-slate-900 focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-600/20" />
             </div>
 
-            <!-- Transaction Reference Number -->
+            <!-- Bank Receipt Upload (PDF or Image) -->
             <div>
-              <label for="receiptRef" class="block text-sm font-semibold text-slate-700">Transaction Reference Code (FT... or Telebirr SMS Ref) <span class="text-rose-600">*</span></label>
-              <input id="receiptRef" type="text" required placeholder="e.g. FT26123ABCD or TXN12345678" class="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 font-mono text-sm uppercase text-slate-900 focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-600/20" />
-              <p class="mt-1 text-xs text-slate-500">Enter the unique reference code from your payment SMS or notification.</p>
-            </div>
+              <label for="receiptFile" class="block text-sm font-semibold text-slate-700">Upload Bank Receipt (PDF / PNG / JPG) <span class="text-rose-600">*</span></label>
+              <p class="mt-0.5 text-xs text-slate-500">Must show account <strong>1****8205</strong> (or 1000581888205), amount (<strong>100×n ETB</strong>), and <strong>FT</strong> reference.</p>
+              <div id="receiptDropZone" class="mt-1.5 rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 p-3.5 text-center transition-all hover:border-emerald-400">
+                <input id="receiptFile" type="file" accept="application/pdf,image/png,image/jpeg,image/webp,image/*" class="block w-full text-xs text-slate-600 file:mr-3 file:rounded-lg file:border-0 file:bg-emerald-600 file:px-3 file:py-2 file:text-xs file:font-semibold file:text-white hover:file:bg-emerald-700" />
+                <p class="mt-1.5 text-[11px] text-slate-400">Or drag and drop PDF / image receipt here</p>
 
-            <!-- Number of Chances (n) & Amount -->
-            <div>
-              <label for="chancesCountInput" class="block text-sm font-semibold text-slate-700">Number of Chances ($n$) — Total Paid: <span id="calcTotalPaid" class="font-extrabold text-emerald-700">100 ETB</span></label>
-              <select id="chancesCountInput" class="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 text-sm text-slate-900 focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-600/20">
-                <option value="1">1 Chance (100 ETB)</option>
-                <option value="2">2 Chances (200 ETB)</option>
-                <option value="3">3 Chances (300 ETB)</option>
-                <option value="4">4 Chances (400 ETB)</option>
-                <option value="5">5 Chances (500 ETB)</option>
-                <option value="10">10 Chances (1,000 ETB)</option>
-              </select>
-            </div>
+                <!-- Preview & Scan Progress -->
+                <div id="receiptPreviewBox" class="mt-3 hidden items-center justify-between gap-3 rounded-lg border border-slate-200 bg-white p-2.5 text-left">
+                  <div class="flex items-center gap-2.5 min-w-0">
+                    <img id="receiptThumb" alt="Receipt preview" class="h-14 w-14 shrink-0 rounded-md border border-slate-200 object-cover" />
+                    <div class="min-w-0">
+                      <div id="receiptFileName" class="truncate text-xs font-semibold text-slate-800"></div>
+                      <div id="scanStatusText" class="text-xs font-medium text-amber-700">Scanning receipt for 1****8205 &amp; FT ref...</div>
+                    </div>
+                  </div>
+                  <button id="clearReceiptBtn" type="button" class="shrink-0 rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-semibold text-slate-600 hover:bg-slate-100">Remove</button>
+                </div>
 
-            <!-- Optional Receipt Upload Box (Hidden by default when Quick Mode is checked) -->
-            <div id="optionalUploadContainer" class="hidden">
-              <label for="receiptFile" class="block text-sm font-semibold text-slate-700">Optional Receipt Screenshot</label>
-              <div class="mt-1.5 rounded-xl border border-slate-300 bg-slate-50 p-3 text-center">
-                <input id="receiptFile" type="file" accept="image/*,application/pdf" class="block w-full text-xs text-slate-600 file:mr-3 file:rounded-lg file:border-0 file:bg-slate-200 file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-slate-700 hover:file:bg-slate-300" />
+                <!-- Strict Scan Rule Checklist -->
+                <div id="ocrChecklist" class="mt-3 hidden rounded-lg border border-slate-200 bg-white p-3 text-left text-xs space-y-1.5">
+                  <div class="font-bold text-slate-800">Scan Rule Verification (1****8205 &amp; FT Ref):</div>
+                  <div id="chkAccount" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Account Check: 1****8205 / 1000581888205</div>
+                  <div id="chkAmount" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Transfer Amount: 100×n ETB (Grants n Chances)</div>
+                  <div id="chkRef" class="flex items-center gap-2 text-slate-500"><span>⏳</span> Unique Unused Transaction Reference (FT...)</div>
+                </div>
               </div>
+            </div>
+
+            <!-- CBE Transaction Reference / FT Number -->
+            <div>
+              <label for="receiptRef" class="block text-sm font-semibold text-slate-700">CBE Transaction Reference (FT Number) <span class="text-rose-600">*</span></label>
+              <input id="receiptRef" type="text" required placeholder="Auto-detected from receipt or enter FT..." class="mt-1.5 w-full rounded-xl border border-slate-300 px-3.5 py-2.5 font-mono text-sm uppercase text-slate-900 focus:border-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-600/20" />
+              <p id="receiptRefHelp" class="mt-1 text-xs text-slate-500">Must start with FT, match receipt, and be unique.</p>
             </div>
 
             <!-- Payment Confirmation Checkbox -->
@@ -346,7 +323,7 @@
               <label class="flex cursor-pointer items-start gap-2.5">
                 <input id="paymentConfirmCheck" type="checkbox" class="mt-0.5 h-4 w-4 rounded border-emerald-400 text-emerald-600 focus:ring-emerald-600" />
                 <span class="text-xs text-slate-800">
-                  <strong>Confirm Payment Rule:</strong> I confirm I transferred <strong id="confirmAmountText">100 ETB</strong> to Gezahgn Terefe Tamene via the selected payment alternative.
+                  <strong>Confirm Payment Rule:</strong> I confirm I transferred <strong>100×n ETB</strong> to <strong>1000581888205</strong>.
                 </span>
               </label>
             </div>
@@ -360,8 +337,17 @@
               </label>
             </div>
 
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-3.5">
+              <label class="flex cursor-pointer items-start gap-2.5">
+                <input id="autoEmailToggle" type="checkbox" checked class="mt-0.5 h-4 w-4 rounded border-slate-400 text-emerald-600 focus:ring-emerald-600" />
+                <span class="text-xs text-slate-700">
+                  <strong>Auto-Open Email Alarm:</strong> Automatically send trial &amp; receipt details to <strong>gezehegn43@gmail.com</strong> upon every draw.
+                </span>
+              </label>
+            </div>
+
             <button id="payAndDrawBtn" type="submit" disabled class="btn-shimmer w-full rounded-xl bg-emerald-600 px-5 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:bg-slate-300">
-              Verify &amp; Start Multi-Chance Draw
+              Verify Receipt &amp; Start Multi-Chance Draw
             </button>
           </form>
 
@@ -375,24 +361,28 @@
                   <dd id="summaryNumber" class="font-bold text-emerald-700">#--</dd>
                 </div>
                 <div class="flex justify-between">
-                  <dt class="text-slate-500">Payment Method</dt>
-                  <dd id="summaryMethod" class="font-bold text-slate-900">CBE</dd>
+                  <dt class="text-slate-500">Scan Target Account</dt>
+                  <dd class="font-mono font-bold text-slate-900">1****8205</dd>
                 </div>
                 <div class="flex justify-between">
-                  <dt class="text-slate-500">Receiver Account</dt>
-                  <dd id="summaryReceiver" class="font-mono font-bold text-emerald-700">1000581888205</dd>
+                  <dt class="text-slate-500">Full Copy Account</dt>
+                  <dd class="font-mono font-bold text-emerald-700">1000581888205</dd>
                 </div>
                 <div class="flex justify-between">
-                  <dt class="text-slate-500">Total Amount</dt>
-                  <dd id="summaryAmount" class="font-bold text-slate-900">100 ETB</dd>
+                  <dt class="text-slate-500">Receipt Amount</dt>
+                  <dd id="summaryAmount" class="font-bold text-slate-900">Pending (100×n ETB)</dd>
                 </div>
                 <div class="flex justify-between">
                   <dt class="text-slate-500">Chances Granted</dt>
-                  <dd id="summaryTrials" class="font-bold text-emerald-700">1 Chance</dd>
+                  <dd id="summaryTrials" class="font-bold text-emerald-700">0 Chances (n)</dd>
                 </div>
                 <div class="flex justify-between">
-                  <dt class="text-slate-500">Reference Code</dt>
+                  <dt class="text-slate-500">Receipt Ref</dt>
                   <dd id="summaryReceiptRef" class="font-mono text-xs font-semibold text-slate-600">Not entered</dd>
+                </div>
+                <div class="flex justify-between">
+                  <dt class="text-slate-500">Scan Check</dt>
+                  <dd id="summaryReceiptStatus" class="text-xs font-semibold text-rose-600">Pending Receipt</dd>
                 </div>
                 <div class="flex justify-between">
                   <dt class="text-slate-500">Player Try Progress</dt>
@@ -406,18 +396,19 @@
             </div>
 
             <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-600 space-y-1.5">
-              <div class="font-bold text-slate-800">Online Payment Policy</div>
+              <div class="font-bold text-slate-800">Scan Rule Summary</div>
               <p class="leading-relaxed">
-                • Pay online via CBE or Telebirr app.<br/>
-                • Enter your transaction reference code to draw instantly!
+                • Scanner validates account <strong>1****8205</strong> &amp; FT reference<br/>
+                • 100 ETB = 1 Chance, 200 ETB = 2 Chances, 100×n ETB = n Chances
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- STEP 3: Draw & Multi-Chance Result -->
+      <!-- STEP 3: Draw & Multi-Chance Result with "Continue Chance" -->
       <section id="step3Section" class="hidden fade-slide-in">
+        <!-- Drawing Animation State -->
         <div id="drawingState" class="py-10 text-center">
           <div id="rollingNumber" class="drum-rolling mx-auto flex h-28 w-28 items-center justify-center rounded-full border-4 border-emerald-500 text-4xl font-black text-emerald-800">
             --
@@ -426,12 +417,12 @@
           <p id="drawingSubtext" class="mt-1 text-sm text-slate-500">Checking your number against the 1–100 lottery draw.</p>
         </div>
 
-        <!-- Win State -->
+        <!-- Win Confirmation State -->
         <div id="winState" class="hidden space-y-5 fade-slide-in">
           <div class="win-glow rounded-2xl border-2 border-emerald-500 bg-emerald-50 p-5 text-center sm:p-6">
             <div class="text-5xl">🎉</div>
             <h2 class="mt-2 text-2xl font-extrabold text-emerald-900">Congratulations! You Won 1,000 ETB!</h2>
-            <p class="mt-1 text-sm text-emerald-800">Ticket <span id="winTicketId" class="font-mono font-bold"></span> &bull; Ref <span id="winReceiptRef" class="font-mono font-bold"></span></p>
+            <p class="mt-1 text-sm text-emerald-800">Ticket <span id="winTicketId" class="font-mono font-bold"></span> &bull; CBE Ref <span id="winReceiptRef" class="font-mono font-bold"></span></p>
             <div class="mt-4 grid grid-cols-2 gap-3 rounded-xl bg-white p-4 text-left text-sm shadow-sm sm:grid-cols-4">
               <div>
                 <div class="text-xs text-slate-500">Winner Name</div>
@@ -442,7 +433,7 @@
                 <div id="winNumberDisplay" class="font-bold text-emerald-700"></div>
               </div>
               <div>
-                <div class="text-xs text-slate-500">Paid via</div>
+                <div class="text-xs text-slate-500">Paid to Account</div>
                 <div id="winPaidDisplay" class="font-bold text-slate-900"></div>
               </div>
               <div>
@@ -457,7 +448,7 @@
             <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h3 class="text-sm font-bold text-slate-900">📧 Owner Trial &amp; Win Alarm &rarr; gezehegn43@gmail.com</h3>
-                <p class="mt-0.5 text-xs text-slate-600">Owner Gezahgn Terefe Tamene receives trial &amp; transaction details for every draw.</p>
+                <p class="mt-0.5 text-xs text-slate-600">Owner Gezahgn Terefe Tamene receives trial &amp; receipt details for every draw.</p>
               </div>
               <div class="flex flex-wrap gap-2">
                 <a id="mailtoAlarmLink" href="mailto:gezehegn43@gmail.com" class="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-emerald-700">
@@ -476,7 +467,7 @@
               Pick Next Chance Number (&rarr;)
             </button>
             <button id="playAgainAfterWinBtn" type="button" class="rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800">
-              New Payment Round
+              New Receipt Round
             </button>
           </div>
         </div>
@@ -487,9 +478,10 @@
             <div class="text-4xl">🙏</div>
             <h2 id="lossTitle" class="mt-2 text-xl font-extrabold text-rose-900">Chance 1 of n — Not a Match This Time</h2>
             <p id="lossSubtext" class="mx-auto mt-2 max-w-lg text-sm text-rose-800">
-              Your chosen number <strong id="lossPickedNum">#--</strong> did not match (<strong id="lossWinningNum">#--</strong>). You have remaining chances from your payment!
+              Your chosen number <strong id="lossPickedNum">#--</strong> did not match (<strong id="lossWinningNum">#--</strong>). You have remaining chances from your paid receipt!
             </p>
 
+            <!-- Owner Trial Alarm Box for Losses -->
             <div class="mt-4 text-left rounded-xl border border-slate-200 bg-white p-4 sm:p-5">
               <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div>
@@ -513,7 +505,7 @@
                 <span>▶️</span> Pick Chance <span id="nextChanceNum">2</span> Number &amp; Draw
               </button>
               <button id="playAgainAfterLossBtn" type="button" class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800">
-                New Payment Round
+                New Receipt Round
               </button>
             </div>
           </div>
@@ -521,32 +513,37 @@
       </section>
     </main>
 
-    <!-- Recent History -->
+    <!-- Recent Attempts & Receipt Log -->
     <section class="mt-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
       <div class="flex flex-wrap items-center justify-between gap-2">
         <h2 class="text-base font-bold text-slate-900">Verified Multi-Chance Draw History</h2>
-        <span class="text-xs font-medium text-slate-500">Owner: <strong class="text-slate-700">Gezahgn Terefe Tamene</strong></span>
+        <span class="text-xs font-medium text-slate-500">Receiver Account: <strong class="font-mono text-slate-700">1000581888205</strong></span>
       </div>
       <div id="historyList" class="mt-3 space-y-2 text-sm text-slate-500">
-        <p class="text-xs">No verified draws yet. Pick a number and pay online to start.</p>
+        <p class="text-xs">No verified draws yet. Pick a number and upload a receipt to start.</p>
       </div>
     </section>
   </div>
 
   <script>
     (function () {
+      if (typeof pdfjsLib !== 'undefined') {
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      }
+
       const AUTH_HASH_HEX = 'eb5c52d9f1eba28c1abb0b5678b7d7b4d538c2993279e021f7b14daa77a11dd6';
       const AUTH_SESSION_KEY = 'lottery_unlocked_v1';
       const ADMIN_EMAIL = 'gezehegn43@gmail.com';
       const OWNER_NAME = 'Gezahgn Terefe Tamene';
-      const CBE_ACCOUNT = '1000581888205';
-      const TELEBIRR_ACCOUNT = '0916390753';
+      const RECEIVER_ACCOUNT_FULL = '1000581888205';
+      const RECEIVER_ACCOUNT_MASKED_CHECK = '1****8205';
+      const RECEIVER_ACCOUNT_LAST4 = '8205';
       const ENTRY_FEE = 100;
       const PRIZE_AMOUNT = 1000;
-      const USED_REFS_KEY = 'lottery_used_refs_v10';
-      const PLAYER_TRIES_KEY = 'lottery_player_tries_v9';
-      const STATS_STORAGE_KEY = 'lottery_stats_v9';
-      const HISTORY_STORAGE_KEY = 'lottery_history_v9';
+      const USED_REFS_KEY = 'lottery_used_cbe_refs_v8';
+      const PLAYER_TRIES_KEY = 'lottery_player_tries_v7';
+      const STATS_STORAGE_KEY = 'lottery_stats_v7';
+      const HISTORY_STORAGE_KEY = 'lottery_history_v7';
       const WIN_CYCLE_LIMIT = 80;
 
       function loadJSON(key, fallback) {
@@ -561,7 +558,9 @@
       function saveJSON(key, value) {
         try {
           localStorage.setItem(key, JSON.stringify(value));
-        } catch (err) {}
+        } catch (err) {
+          // Ignore storage restrictions
+        }
       }
 
       function getPlayerKey(name, account) {
@@ -574,13 +573,24 @@
 
       const state = {
         selectedNumber: null,
-        paymentMethod: 'CBE',
         attempts: Number(savedStats.attempts) || 0,
         wins: Number(savedStats.wins) || 0,
         totalPaid: Number(savedStats.totalPaid) || 0,
         soundEnabled: true,
         ownerUnlocked: false,
+        receiptFile: null,
+        receiptPreviewUrl: null,
+        isScanning: false,
+        ocrText: '',
+        detectedAmount: 0,
+        totalChances: 0,
+        currentChanceIndex: 1,
         activeSessionData: null,
+        ocrChecks: {
+          account: false,
+          amount: false,
+          refMatch: false
+        },
         usedRefs: loadJSON(USED_REFS_KEY, []),
         playerTries: loadJSON(PLAYER_TRIES_KEY, {}),
         history: loadJSON(HISTORY_STORAGE_KEY, []),
@@ -591,10 +601,12 @@
         toast: document.getElementById('toast'),
         confettiCanvas: document.getElementById('confettiCanvas'),
         authOverlay: document.getElementById('authOverlay'),
+        authDialog: document.getElementById('authDialog'),
+        closeAuthModalBtn: document.getElementById('closeAuthModalBtn'),
+        authForm: document.getElementById('authForm'),
         authPassword: document.getElementById('authPassword'),
         toggleAuthPwdBtn: document.getElementById('toggleAuthPwdBtn'),
         authError: document.getElementById('authError'),
-        authForm: document.getElementById('authForm'),
         lockAppBtn: document.getElementById('lockAppBtn'),
         soundToggleBtn: document.getElementById('soundToggleBtn'),
         statAttempts: document.getElementById('statAttempts'),
@@ -614,28 +626,31 @@
         toStep2Btn: document.getElementById('toStep2Btn'),
         backToStep1Btn: document.getElementById('backToStep1Btn'),
         paymentForm: document.getElementById('paymentForm'),
-        cbeOptionCard: document.getElementById('cbeOptionCard'),
-        telebirrOptionCard: document.getElementById('telebirrOptionCard'),
-        receiverTitleLabel: document.getElementById('receiverTitleLabel'),
-        receiverAccountDisplay: document.getElementById('receiverAccountDisplay'),
-        directRefModeToggle: document.getElementById('directRefModeToggle'),
-        optionalUploadContainer: document.getElementById('optionalUploadContainer'),
         playerName: document.getElementById('playerName'),
         senderAccount: document.getElementById('senderAccount'),
         receiptRef: document.getElementById('receiptRef'),
-        chancesCountInput: document.getElementById('chancesCountInput'),
-        calcTotalPaid: document.getElementById('calcTotalPaid'),
-        confirmAmountText: document.getElementById('confirmAmountText'),
+        receiptRefHelp: document.getElementById('receiptRefHelp'),
+        receiptDropZone: document.getElementById('receiptDropZone'),
+        receiptFile: document.getElementById('receiptFile'),
+        receiptPreviewBox: document.getElementById('receiptPreviewBox'),
+        receiptThumb: document.getElementById('receiptThumb'),
+        receiptFileName: document.getElementById('receiptFileName'),
+        scanStatusText: document.getElementById('scanStatusText'),
+        clearReceiptBtn: document.getElementById('clearReceiptBtn'),
+        ocrChecklist: document.getElementById('ocrChecklist'),
+        chkAccount: document.getElementById('chkAccount'),
+        chkAmount: document.getElementById('chkAmount'),
+        chkRef: document.getElementById('chkRef'),
         paymentConfirmCheck: document.getElementById('paymentConfirmCheck'),
         ownerTestBox: document.getElementById('ownerTestBox'),
         demoWinToggle: document.getElementById('demoWinToggle'),
+        autoEmailToggle: document.getElementById('autoEmailToggle'),
         payAndDrawBtn: document.getElementById('payAndDrawBtn'),
         summaryNumber: document.getElementById('summaryNumber'),
-        summaryMethod: document.getElementById('summaryMethod'),
-        summaryReceiver: document.getElementById('summaryReceiver'),
         summaryAmount: document.getElementById('summaryAmount'),
         summaryTrials: document.getElementById('summaryTrials'),
         summaryReceiptRef: document.getElementById('summaryReceiptRef'),
+        summaryReceiptStatus: document.getElementById('summaryReceiptStatus'),
         summaryPlayerTries: document.getElementById('summaryPlayerTries'),
         drawingState: document.getElementById('drawingState'),
         drawingHeading: document.getElementById('drawingHeading'),
@@ -668,6 +683,7 @@
         historyList: document.getElementById('historyList')
       };
 
+      /* --- Web Audio Synthesized Sound Effects --- */
       let audioCtx = null;
       function playTone(freq, type, duration, gainVal, delay) {
         if (!state.soundEnabled) return;
@@ -676,18 +692,23 @@
           if (!AudioContext) return;
           if (!audioCtx) audioCtx = new AudioContext();
           if (audioCtx.state === 'suspended') audioCtx.resume();
+
           const startTime = audioCtx.currentTime + (delay || 0);
           const osc = audioCtx.createOscillator();
           const gain = audioCtx.createGain();
           osc.type = type || 'sine';
           osc.frequency.setValueAtTime(freq, startTime);
+
           gain.gain.setValueAtTime(gainVal || 0.08, startTime);
           gain.gain.exponentialRampToValueAtTime(0.0001, startTime + duration);
+
           osc.connect(gain);
           gain.connect(audioCtx.destination);
           osc.start(startTime);
           osc.stop(startTime + duration);
-        } catch (err) {}
+        } catch (err) {
+          // Ignore audio restrictions
+        }
       }
 
       const sfx = {
@@ -705,12 +726,14 @@
         }
       };
 
+      /* --- Confetti Celebration --- */
       function launchConfetti() {
         const canvas = el.confettiCanvas;
         if (!canvas) return;
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+
         const colors = ['#10b981', '#059669', '#f59e0b', '#3b82f6', '#ec4899', '#8b5cf6'];
         const particles = Array.from({ length: 130 }, () => ({
           x: Math.random() * canvas.width,
@@ -723,6 +746,7 @@
           vRot: (Math.random() - 0.5) * 10,
           color: colors[Math.floor(Math.random() * colors.length)]
         }));
+
         let frame = 0;
         function animate() {
           ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -749,6 +773,7 @@
         requestAnimationFrame(animate);
       }
 
+      /* --- Toast --- */
       let toastTimer = null;
       function showToast(msg, isError) {
         if (!el.toast) return;
@@ -788,6 +813,7 @@
         document.body.removeChild(ta);
       }
 
+      /* --- SHA-256 --- */
       async function sha256Hex(str) {
         if (window.crypto && window.crypto.subtle) {
           const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
@@ -801,7 +827,9 @@
       function syncOwnerUI() {
         try {
           state.ownerUnlocked = sessionStorage.getItem(AUTH_SESSION_KEY) === '1';
-        } catch (err) {}
+        } catch (err) {
+          // Ignore storage restrictions
+        }
         if (state.ownerUnlocked) {
           el.ownerTestBox.classList.remove('hidden');
           el.lockAppBtn.textContent = '🔓 Owner Active';
@@ -810,6 +838,19 @@
           el.demoWinToggle.checked = false;
           el.lockAppBtn.textContent = '🔒 Owner';
         }
+      }
+
+      function openAuthModal() {
+        el.authError.classList.add('hidden');
+        el.authPassword.value = '';
+        el.authOverlay.classList.remove('hidden');
+        el.authOverlay.classList.add('flex');
+        setTimeout(() => el.authPassword.focus(), 50);
+      }
+
+      function closeAuthModal() {
+        el.authOverlay.classList.add('hidden');
+        el.authOverlay.classList.remove('flex');
       }
 
       function setStep(stepNum) {
@@ -874,26 +915,118 @@
         });
       }
 
-      function updatePaymentMethodUI() {
-        const isCBE = state.paymentMethod === 'CBE';
-        el.cbeOptionCard.className = isCBE
-          ? 'flex cursor-pointer items-center gap-3 rounded-xl border-2 border-emerald-600 bg-emerald-50/50 p-3.5 transition-all'
-          : 'flex cursor-pointer items-center gap-3 rounded-xl border-2 border-slate-200 bg-white p-3.5 transition-all';
-        el.telebirrOptionCard.className = !isCBE
-          ? 'flex cursor-pointer items-center gap-3 rounded-xl border-2 border-emerald-600 bg-emerald-50/50 p-3.5 transition-all'
-          : 'flex cursor-pointer items-center gap-3 rounded-xl border-2 border-slate-200 bg-white p-3.5 transition-all';
-
-        if (isCBE) {
-          el.receiverTitleLabel.textContent = 'Receiver CBE Account (Copy to Send)';
-          el.receiverAccountDisplay.textContent = CBE_ACCOUNT;
-          el.summaryMethod.textContent = 'CBE';
-          el.summaryReceiver.textContent = CBE_ACCOUNT;
-        } else {
-          el.receiverTitleLabel.textContent = 'Receiver Telebirr Account / Phone (Copy to Send)';
-          el.receiverAccountDisplay.textContent = TELEBIRR_ACCOUNT;
-          el.summaryMethod.textContent = 'Telebirr';
-          el.summaryReceiver.textContent = TELEBIRR_ACCOUNT;
+      function updateChecklistRow(node, status, label) {
+        if (!node) return;
+        let icon = '⏳';
+        let cls = 'flex items-center gap-2 text-slate-500';
+        if (status === 'pass') {
+          icon = '✅';
+          cls = 'flex items-center gap-2 font-semibold text-emerald-700';
+        } else if (status === 'fail') {
+          icon = '❌';
+          cls = 'flex items-center gap-2 font-semibold text-rose-600';
         }
+        node.className = cls;
+        node.innerHTML = '<span>' + icon + '</span> ' + label;
+      }
+
+      async function extractPdfText(file) {
+        if (typeof pdfjsLib === 'undefined') {
+          throw new Error('PDF reader library unavailable');
+        }
+        const arrayBuffer = await file.arrayBuffer();
+        const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+        let fullText = '';
+        for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+          const page = await pdf.getPage(pageNum);
+          const content = await page.getTextContent();
+          const pageStrings = content.items.map((item) => item.str);
+          fullText += pageStrings.join(' ') + '\n';
+        }
+        return fullText;
+      }
+
+      function parseReceiptAmount(upperText) {
+        const candidates = [];
+        const patterns = [
+          /(?:ETB|BIRR)\s*([0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]{1,2})?/gi,
+          /\b([0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]{1,2})?\s*(?:ETB|BIRR)\b/gi,
+          /(?:AMOUNT|TOTAL|PAID|TRANSFERRED)[^\d\n]{0,20}([0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]{1,2})?/gi
+        ];
+        patterns.forEach((re) => {
+          let m;
+          while ((m = re.exec(upperText)) !== null) {
+            const val = parseInt(String(m[1]).replace(/,/g, ''), 10);
+            if (!Number.isNaN(val) && val >= ENTRY_FEE && val <= 100000) {
+              candidates.push(val);
+            }
+          }
+        });
+        const validMultiples = candidates.filter((v) => v % ENTRY_FEE === 0);
+        if (validMultiples.length > 0) return Math.max(...validMultiples);
+        if (candidates.length > 0) return candidates[0];
+        return 0;
+      }
+
+      function extractFtReference(upperText) {
+        const direct = upperText.match(/\bFT[A-Z0-9]{8,14}\b/);
+        if (direct) return direct[0];
+        const spaced = upperText.match(/\bFT[\s-]?([A-Z0-9]{8,14})\b/);
+        if (spaced) return 'FT' + spaced[1];
+        return '';
+      }
+
+      function evaluateOcrAgainstInputs() {
+        const text = state.ocrText || '';
+        const upper = text.toUpperCase();
+        const compactUpper = upper.replace(/\s+/g, '');
+        const compactDigits = text.replace(/[^0-9]/g, '');
+
+        // STRICT SCAN CHECK: Account 1****8205 (or full 1000581888205)
+        const hasAccount =
+          compactDigits.includes(RECEIVER_ACCOUNT_FULL) ||
+          compactDigits.includes(RECEIVER_ACCOUNT_LAST4) ||
+          /1\*{2,6}8205/.test(compactUpper);
+
+        const parsedAmount = parseReceiptAmount(upper);
+        const isMultiple = parsedAmount >= ENTRY_FEE && parsedAmount % ENTRY_FEE === 0;
+        const chancesCount = isMultiple ? parsedAmount / ENTRY_FEE : 0;
+
+        state.detectedAmount = parsedAmount;
+        state.totalChances = chancesCount;
+
+        const enteredRef = el.receiptRef.value.trim().toUpperCase().replace(/\s+/g, '');
+        const ftMatches = upper.match(/\bFT[A-Z0-9]{8,14}\b/g) || [];
+        const refValidFormat = /^FT[A-Z0-9]{8,14}$/.test(enteredRef);
+        const refInReceipt = refValidFormat && (compactUpper.includes(enteredRef) || ftMatches.includes(enteredRef));
+        const refUnused = refValidFormat && !state.usedRefs.includes(enteredRef);
+
+        state.ocrChecks.account = hasAccount;
+        state.ocrChecks.amount = isMultiple;
+        state.ocrChecks.refMatch = refInReceipt && refUnused;
+
+        if (state.receiptFile && !state.isScanning) {
+          updateChecklistRow(el.chkAccount, hasAccount ? 'pass' : 'fail', 'Account Check: 1****8205 / 1000581888205');
+
+          if (isMultiple) {
+            updateChecklistRow(el.chkAmount, 'pass', 'Transfer Amount: ' + parsedAmount.toLocaleString() + ' ETB (' + chancesCount + (chancesCount === 1 ? ' Chance)' : ' Chances)'));
+          } else if (parsedAmount > 0) {
+            updateChecklistRow(el.chkAmount, 'fail', 'Detected ' + parsedAmount + ' ETB — must be a multiple of 100 ETB');
+          } else {
+            updateChecklistRow(el.chkAmount, 'fail', 'Valid ETB transfer amount (100×n ETB) not detected');
+          }
+
+          if (!refValidFormat) {
+            updateChecklistRow(el.chkRef, 'fail', 'CBE Transaction Reference (must start with FT...)');
+          } else if (!refUnused) {
+            updateChecklistRow(el.chkRef, 'fail', 'Reference ' + enteredRef + ' has already been used');
+          } else if (!refInReceipt) {
+            updateChecklistRow(el.chkRef, 'fail', 'Entered FT reference not found on receipt');
+          } else {
+            updateChecklistRow(el.chkRef, 'pass', 'Unique CBE Transaction Reference (' + enteredRef + ')');
+          }
+        }
+
         updatePaymentFormState();
       }
 
@@ -901,24 +1034,138 @@
         const nameOk = el.playerName.value.trim().length >= 2;
         const senderOk = el.senderAccount.value.trim().length >= 6;
         const refVal = el.receiptRef.value.trim().toUpperCase().replace(/\s+/g, '');
-        const refValid = refVal.length >= 6 && !state.usedRefs.includes(refVal);
         const confirmOk = el.paymentConfirmCheck.checked;
 
-        const chances = parseInt(el.chancesCountInput.value, 10) || 1;
-        const totalAmount = chances * ENTRY_FEE;
-
-        el.calcTotalPaid.textContent = totalAmount.toLocaleString() + ' ETB';
-        el.confirmAmountText.textContent = totalAmount.toLocaleString() + ' ETB';
-        el.summaryAmount.textContent = totalAmount.toLocaleString() + ' ETB';
-        el.summaryTrials.textContent = chances + (chances === 1 ? ' Chance' : ' Chances');
         el.summaryReceiptRef.textContent = refVal || 'Not entered';
+        el.summaryAmount.textContent = state.detectedAmount > 0 ? state.detectedAmount.toLocaleString() + ' ETB' : 'Pending (100×n ETB)';
+        el.summaryTrials.textContent = state.totalChances > 0 ? state.totalChances + (state.totalChances === 1 ? ' Chance' : ' Chances (100×n)') : '0';
 
         const key = getPlayerKey(el.playerName.value, el.senderAccount.value);
         const tries = key ? (state.playerTries[key] || 0) : 0;
         el.summaryPlayerTries.textContent = tries + ' / ' + WIN_CYCLE_LIMIT;
 
-        const allPass = nameOk && senderOk && refValid && confirmOk && state.selectedNumber !== null;
-        el.payAndDrawBtn.disabled = !allPass;
+        const allOcrPass =
+          Boolean(state.receiptFile) &&
+          !state.isScanning &&
+          state.ocrChecks.account &&
+          state.ocrChecks.amount &&
+          state.ocrChecks.refMatch;
+
+        if (!state.receiptFile) {
+          el.summaryReceiptStatus.textContent = 'Pending Receipt';
+          el.summaryReceiptStatus.className = 'text-xs font-semibold text-rose-600';
+        } else if (state.isScanning) {
+          el.summaryReceiptStatus.textContent = 'Scanning...';
+          el.summaryReceiptStatus.className = 'text-xs font-semibold text-amber-600';
+        } else if (allOcrPass) {
+          el.summaryReceiptStatus.textContent = state.totalChances + (state.totalChances === 1 ? ' Chance Verified ✓' : ' Chances Verified ✓');
+          el.summaryReceiptStatus.className = 'text-xs font-semibold text-emerald-700';
+        } else {
+          el.summaryReceiptStatus.textContent = 'Scan Check Failed';
+          el.summaryReceiptStatus.className = 'text-xs font-semibold text-rose-600';
+        }
+
+        el.payAndDrawBtn.disabled = !(nameOk && senderOk && allOcrPass && confirmOk && state.selectedNumber !== null);
+      }
+
+      async function handleReceiptUpload(file) {
+        if (!file) return;
+        if (state.receiptPreviewUrl) {
+          URL.revokeObjectURL(state.receiptPreviewUrl);
+          state.receiptPreviewUrl = null;
+        }
+        state.receiptFile = file;
+        state.receiptPreviewUrl = URL.createObjectURL(file);
+        state.isScanning = true;
+        state.ocrText = '';
+        state.detectedAmount = 0;
+        state.totalChances = 0;
+        state.ocrChecks = { account: false, amount: false, refMatch: false };
+
+        if (file.type.startsWith('image/')) {
+          el.receiptThumb.src = state.receiptPreviewUrl;
+        } else {
+          el.receiptThumb.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="%23059669" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>';
+        }
+
+        el.receiptFileName.textContent = file.name;
+        el.scanStatusText.textContent = 'Scanning for 1****8205 &amp; FT reference...';
+        el.scanStatusText.className = 'text-xs font-medium text-amber-700';
+        el.receiptPreviewBox.classList.remove('hidden');
+        el.receiptPreviewBox.classList.add('flex');
+        el.ocrChecklist.classList.remove('hidden');
+
+        updateChecklistRow(el.chkAccount, 'pending', 'Account Check: 1****8205 / 1000581888205');
+        updateChecklistRow(el.chkAmount, 'pending', 'Transfer Amount: 100×n ETB (Grants n Chances)');
+        updateChecklistRow(el.chkRef, 'pending', 'Unique Unused Transaction Reference (FT...)');
+        updatePaymentFormState();
+
+        try {
+          if (file.type === 'application/pdf') {
+            el.scanStatusText.textContent = 'Extracting text from PDF receipt...';
+            state.ocrText = await extractPdfText(file);
+          } else if (typeof Tesseract !== 'undefined' && Tesseract.recognize) {
+            const result = await Tesseract.recognize(file, 'eng', {
+              logger: (m) => {
+                if (m && m.status === 'recognizing text' && typeof m.progress === 'number') {
+                  el.scanStatusText.textContent = 'Scanning receipt (' + Math.round(m.progress * 100) + '%)...';
+                }
+              }
+            });
+            state.ocrText = (result && result.data && result.data.text) ? result.data.text : '';
+          } else {
+            throw new Error('OCR unavailable');
+          }
+
+          state.isScanning = false;
+
+          const detectedFt = extractFtReference(state.ocrText.toUpperCase());
+          if (detectedFt && !el.receiptRef.value.trim()) {
+            el.receiptRef.value = detectedFt;
+          }
+
+          evaluateOcrAgainstInputs();
+          const passed =
+            state.ocrChecks.account &&
+            state.ocrChecks.amount &&
+            state.ocrChecks.refMatch;
+
+          if (passed) {
+            el.scanStatusText.textContent = 'Receipt Verified! (' + state.totalChances + ' Chances granted)';
+            el.scanStatusText.className = 'text-xs font-semibold text-emerald-700';
+            showToast('Receipt verified successfully (' + state.totalChances + ' chances)!');
+          } else {
+            el.scanStatusText.textContent = 'Scan check failed. Ensure account 1****8205 &amp; FT ref are valid.';
+            el.scanStatusText.className = 'text-xs font-semibold text-rose-600';
+            showToast('Receipt rejected: account 1****8205 or FT reference not matched.', true);
+          }
+        } catch (err) {
+          state.isScanning = false;
+          state.ocrText = '';
+          evaluateOcrAgainstInputs();
+          el.scanStatusText.textContent = 'Could not read receipt. Please upload a clear file.';
+          el.scanStatusText.className = 'text-xs font-semibold text-rose-600';
+          showToast('Failed to scan receipt file.', true);
+        }
+      }
+
+      function clearReceipt(silent) {
+        if (state.receiptPreviewUrl) {
+          URL.revokeObjectURL(state.receiptPreviewUrl);
+          state.receiptPreviewUrl = null;
+        }
+        state.receiptFile = null;
+        state.isScanning = false;
+        state.ocrText = '';
+        state.detectedAmount = 0;
+        state.totalChances = 0;
+        state.ocrChecks = { account: false, amount: false, refMatch: false };
+        el.receiptFile.value = '';
+        el.receiptPreviewBox.classList.add('hidden');
+        el.receiptPreviewBox.classList.remove('flex');
+        el.ocrChecklist.classList.add('hidden');
+        updatePaymentFormState();
+        if (!silent) showToast('Receipt removed.');
       }
 
       function resetForNextRound() {
@@ -927,12 +1174,14 @@
           state.drawInterval = null;
         }
         state.selectedNumber = null;
+        state.currentChanceIndex = 1;
         state.activeSessionData = null;
         el.selectedBadge.textContent = 'None';
         el.summaryNumber.textContent = '#--';
         el.toStep2Btn.disabled = true;
         el.receiptRef.value = '';
         el.paymentConfirmCheck.checked = false;
+        clearReceipt(true);
         buildNumberGrid();
         setStep(1);
       }
@@ -951,7 +1200,7 @@
       function renderHistory() {
         if (state.history.length === 0) {
           el.historyList.innerHTML =
-            '<p class="text-xs">No verified draws yet. Pick a number and pay online to start.</p>';
+            '<p class="text-xs">No verified draws yet. Pick a number and upload a receipt to start.</p>';
           return;
         }
         el.historyList.innerHTML = state.history
@@ -967,7 +1216,7 @@
                     '<span class="text-xs font-semibold text-slate-700">' + escapeHtml(item.playerName) + '</span>' +
                     badge +
                   '</div>' +
-                  '<div class="mt-0.5 text-xs text-slate-500">Method: <strong>' + escapeHtml(item.method) + '</strong> &bull; Picked <strong>#' + item.picked + '</strong> &bull; Chance <strong>' + item.chanceNum + '/' + item.totalChances + '</strong> &bull; Ref <span class="font-mono">' + escapeHtml(item.ref) + '</span></div>' +
+                  '<div class="mt-0.5 text-xs text-slate-500">Picked <strong>#' + item.picked + '</strong> &bull; Chance <strong>' + item.chanceNum + '/' + item.totalChances + '</strong> &bull; Winning <strong>#' + item.winning + '</strong> &bull; Ref <span class="font-mono">' + escapeHtml(item.ref) + '</span></div>' +
                 '</div>' +
                 '<div class="text-xs font-medium text-slate-500 shrink-0">' + escapeHtml(item.time) + '</div>' +
               '</div>'
@@ -994,13 +1243,12 @@
           const playerName = el.playerName.value.trim();
           const senderAcc = el.senderAccount.value.trim();
           const refVal = el.receiptRef.value.trim().toUpperCase().replace(/\s+/g, '');
-          const paymentMethod = state.paymentMethod;
           const picked = state.selectedNumber;
-          const totalChances = parseInt(el.chancesCountInput.value, 10) || 1;
+          const totalChances = Math.max(1, state.totalChances || 1);
           const totalPaidNow = totalChances * ENTRY_FEE;
 
           if (state.usedRefs.includes(refVal)) {
-            showToast('This transaction reference has already been used.', true);
+            showToast('This CBE reference has already been used.', true);
             return;
           }
 
@@ -1014,15 +1262,15 @@
             playerName,
             senderAcc,
             refVal,
-            paymentMethod,
             picked,
             totalChances,
             currentChance: 1
           };
           state.activeSessionData = session;
+          state.currentChanceIndex = 1;
         } else {
           session = state.activeSessionData;
-          session.picked = state.selectedNumber;
+          session.picked = state.selectedNumber; // updated for consecutive chance
         }
 
         runSingleChanceDraw(session);
@@ -1081,7 +1329,6 @@
               playerName: session.playerName,
               senderAcc: session.senderAcc,
               refVal: session.refVal,
-              paymentMethod: session.paymentMethod,
               currentChance: session.currentChance,
               totalChances: session.totalChances
             });
@@ -1094,25 +1341,26 @@
         const timestamp = new Date().toLocaleString();
 
         el.drawingState.classList.add('hidden');
+
         const hasMoreChances = data.currentChance < data.totalChances;
 
+        // Build Owner Alarm Text for EVERY trial (Win or Loss)
         const alarmText =
-          'ONLINE PAYMENT LOTTERY ALARM (' + data.paymentMethod.toUpperCase() + ' - GEZAHGN TEREFE TAMENE)\n' +
-          '==========================================================\n' +
+          'CBE LOTTERY TRIAL ALARM (GEZAHGN TEREFE TAMENE)\n' +
+          '==============================================\n' +
           'Ticket ID: ' + ticketId + '\n' +
           'Player Name: ' + data.playerName + '\n' +
-          'Sender Account/Phone: ' + data.senderAcc + '\n' +
-          'Payment Method: ' + data.paymentMethod + '\n' +
+          'Sender CBE / Phone: ' + data.senderAcc + '\n' +
           'Chosen Number: #' + data.picked + '\n' +
           'Drawn Number: #' + data.winningNumber + '\n' +
           'Chance: Chance ' + data.currentChance + ' of ' + data.totalChances + '\n' +
           'Trial Result: ' + (data.isWin ? 'WON 1,000 ETB! 🎉' : 'No Match (Try Again)') + '\n' +
-          'Owner Name: ' + OWNER_NAME + '\n' +
-          'Receiver Account: ' + (data.paymentMethod === 'CBE' ? CBE_ACCOUNT : TELEBIRR_ACCOUNT) + '\n' +
-          'Transaction Ref: ' + data.refVal + '\n' +
+          'Receiver Name: ' + OWNER_NAME + '\n' +
+          'Receiver CBE Account: ' + RECEIVER_ACCOUNT_FULL + '\n' +
+          'CBE Receipt Ref: ' + data.refVal + '\n' +
           'Timestamp: ' + timestamp;
 
-        const subject = 'Online Payment Lottery Alarm (' + ticketId + ') - ' + data.playerName + ' - ' + data.refVal;
+        const subject = 'Lottery Trial Alarm (' + ticketId + ') - ' + data.playerName + ' - ' + data.refVal;
         const mailtoUrl =
           'mailto:' + ADMIN_EMAIL +
           '?subject=' + encodeURIComponent(subject) +
@@ -1128,7 +1376,7 @@
           el.winReceiptRef.textContent = data.refVal;
           el.winPlayerName.textContent = data.playerName;
           el.winNumberDisplay.textContent = '#' + data.picked + ' (Chance ' + data.currentChance + '/' + data.totalChances + ')';
-          el.winPaidDisplay.textContent = data.paymentMethod + ' (' + (data.totalChances * ENTRY_FEE) + ' ETB)';
+          el.winPaidDisplay.textContent = (data.totalChances * ENTRY_FEE) + ' ETB (' + data.totalChances + (data.totalChances === 1 ? ' Chance)' : ' Chances)');
           el.winPrizeDisplay.textContent = PRIZE_AMOUNT.toLocaleString() + ' ETB';
 
           el.alarmPreview.textContent = alarmText;
@@ -1139,6 +1387,7 @@
           } else {
             el.continueAfterWinBtn.classList.add('hidden');
           }
+
           el.winState.classList.remove('hidden');
         } else {
           sfx.loss();
@@ -1154,13 +1403,15 @@
             el.nextChanceNum.textContent = String(data.currentChance + 1);
             el.continueChanceBtn.classList.remove('hidden');
           } else {
-            el.lossTitle.textContent = 'All ' + data.totalChances + ' Chances Completed — Thank You!';
-            el.lossSubtext.innerHTML = 'Your chosen number <strong>#' + data.picked + '</strong> did not match (<strong>#' + data.winningNumber + '</strong>). All chances from this payment have been played.';
+            el.lossTitle.textContent = 'All ' + data.totalChances + (data.totalChances === 1 ? ' Chance Completed' : ' Chances Completed') + ' — Thank You!';
+            el.lossSubtext.innerHTML = 'Your chosen number <strong>#' + data.picked + '</strong> did not match (<strong>#' + data.winningNumber + '</strong>). All chances from this receipt have been played.';
             el.continueChanceBtn.classList.add('hidden');
           }
+
           el.lossState.classList.remove('hidden');
         }
 
+        // Automatically trigger alarm email to owner
         try {
           const iframe = document.createElement('iframe');
           iframe.style.display = 'none';
@@ -1168,6 +1419,7 @@
           document.body.appendChild(iframe);
           setTimeout(() => document.body.removeChild(iframe), 1000);
         } catch (err) {
+          // Fallback location trigger if iframe blocked
           window.location.href = mailtoUrl;
         }
 
@@ -1178,7 +1430,7 @@
           winning: data.winningNumber,
           chanceNum: data.currentChance,
           totalChances: data.totalChances,
-          method: data.paymentMethod,
+          paid: ENTRY_FEE,
           ref: data.refVal,
           won: data.isWin,
           time: timestamp
@@ -1195,35 +1447,11 @@
         el.selectedBadge.textContent = 'None';
         buildNumberGrid();
         el.step1Heading.textContent = 'Pick Chance ' + nextIdx + ' of ' + state.activeSessionData.totalChances + ' Lucky Number (1–100)';
-        el.step1Subtext.textContent = 'Select your next consecutive number for Chance ' + nextIdx + '.';
+        el.step1Subtext.textContent = 'Select your next consecutive number for Chance ' + nextIdx + ' using your paid receipt.';
         setStep(1);
       }
 
-      const paymentRadios = document.querySelectorAll('input[name="paymentMethod"]');
-      paymentRadios.forEach((radio) => {
-        radio.addEventListener('change', (e) => {
-          state.paymentMethod = e.target.value;
-          updatePaymentMethodUI();
-        });
-      });
-
-      el.cbeOptionCard.addEventListener('click', () => {
-        paymentRadios.forEach(r => { if(r.value === 'CBE') r.checked = true; });
-        state.paymentMethod = 'CBE';
-        updatePaymentMethodUI();
-      });
-
-      el.telebirrOptionCard.addEventListener('click', () => {
-        paymentRadios.forEach(r => { if(r.value === 'Telebirr') r.checked = true; });
-        state.paymentMethod = 'Telebirr';
-        updatePaymentMethodUI();
-      });
-
-      el.directRefModeToggle.addEventListener('change', (e) => {
-        const isQuickMode = e.target.checked;
-        el.optionalUploadContainer.classList.toggle('hidden', isQuickMode);
-      });
-
+      // Event Listeners
       el.continueChanceBtn.addEventListener('click', () => {
         sfx.click();
         if (state.activeSessionData) {
@@ -1251,10 +1479,11 @@
         if (state.selectedNumber === null) return;
         sfx.click();
         if (state.activeSessionData) {
+          // If already in an active session, skip step 2 and proceed directly to drawing the next consecutive chance!
           startDrawSession(null);
         } else {
           setStep(2);
-          updatePaymentMethodUI();
+          updatePaymentFormState();
         }
       });
 
@@ -1265,15 +1494,39 @@
 
       el.copyAccountBtn.addEventListener('click', () => {
         sfx.click();
-        const val = state.paymentMethod === 'CBE' ? CBE_ACCOUNT : TELEBIRR_ACCOUNT;
-        copyText(val, state.paymentMethod + ' account/phone ' + val + ' copied!');
+        copyText(RECEIVER_ACCOUNT_FULL, 'CBE account 1000581888205 copied!');
       });
+
+      el.receiptFile.addEventListener('change', (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (file) handleReceiptUpload(file);
+      });
+
+      ['dragenter', 'dragover'].forEach((evt) => {
+        el.receiptDropZone.addEventListener(evt, (e) => {
+          e.preventDefault();
+          el.receiptDropZone.classList.add('drop-active');
+        });
+      });
+      ['dragleave', 'drop'].forEach((evt) => {
+        el.receiptDropZone.addEventListener(evt, (e) => {
+          e.preventDefault();
+          el.receiptDropZone.classList.remove('drop-active');
+        });
+      });
+      el.receiptDropZone.addEventListener('drop', (e) => {
+        const file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+        if (file) handleReceiptUpload(file);
+      });
+
+      el.clearReceiptBtn.addEventListener('click', () => clearReceipt(false));
 
       el.playerName.addEventListener('input', updatePaymentFormState);
       el.senderAccount.addEventListener('input', updatePaymentFormState);
-      el.receiptRef.addEventListener('input', updatePaymentFormState);
-      el.chancesCountInput.addEventListener('change', updatePaymentFormState);
       el.paymentConfirmCheck.addEventListener('change', updatePaymentFormState);
+      el.receiptRef.addEventListener('input', () => {
+        evaluateOcrAgainstInputs();
+      });
 
       el.paymentForm.addEventListener('submit', startDrawSession);
 
@@ -1307,7 +1560,11 @@
       el.lockAppBtn.addEventListener('click', () => {
         sfx.click();
         if (state.ownerUnlocked) {
-          try { sessionStorage.removeItem(AUTH_SESSION_KEY); } catch (err) {}
+          try {
+            sessionStorage.removeItem(AUTH_SESSION_KEY);
+          } catch (err) {
+            // Ignore storage restrictions
+          }
           syncOwnerUI();
           showToast('Owner Mode locked.');
         } else {
@@ -1315,20 +1572,8 @@
         }
       });
 
-      function openAuthModal() {
-        el.authError.classList.add('hidden');
-        el.authPassword.value = '';
-        el.authOverlay.classList.remove('hidden');
-        el.authOverlay.classList.add('flex');
-        setTimeout(() => el.authPassword.focus(), 50);
-      }
+      el.closeAuthModalBtn.addEventListener('click', closeAuthModal);
 
-      function closeAuthModal() {
-        el.authOverlay.classList.add('hidden');
-        el.authOverlay.classList.remove('flex');
-      }
-
-      document.getElementById('closeAuthModalBtn').addEventListener('click', closeAuthModal);
       el.authOverlay.addEventListener('click', (e) => {
         if (e.target === el.authOverlay) closeAuthModal();
       });
@@ -1352,18 +1597,23 @@
         try {
           const hex = await sha256Hex(pwd);
           if (hex === AUTH_HASH_HEX) {
-            try { sessionStorage.setItem(AUTH_SESSION_KEY, '1'); } catch (err) {}
+            try {
+              sessionStorage.setItem(AUTH_SESSION_KEY, '1');
+            } catch (err) {
+              // Ignore storage restrictions
+            }
             syncOwnerUI();
             closeAuthModal();
             showToast('Owner Test Win Mode unlocked.');
           } else {
-            el.authError.classList.remove('hidden');
+            el.authError.classList.add('hidden');
           }
         } catch (err) {
-          el.authError.classList.remove('hidden');
+          el.authError.classList.add('hidden');
         }
       });
 
+      // Initialize
       buildNumberGrid();
       syncOwnerUI();
       renderStats();
